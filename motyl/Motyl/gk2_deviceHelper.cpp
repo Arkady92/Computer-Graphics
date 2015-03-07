@@ -210,7 +210,7 @@ D3D11_RASTERIZER_DESC DeviceHelper::DefaultRasterizerDesc()
 	D3D11_RASTERIZER_DESC desc;
 	desc.FillMode = D3D11_FILL_SOLID; //Determines the solid fill mode (as opposed to wireframe)
 	desc.CullMode = D3D11_CULL_BACK; //Indicates that back facing triangles are not drawn
-	desc.FrontCounterClockwise = false; //Indicates that vertices of a front facing triangle are counter-clockwise on the render target
+	desc.FrontCounterClockwise = true; //Indicates that vertices of a front facing triangle are counter-clockwise on the render target
 	desc.DepthBias = 0;
 	desc.DepthBiasClamp = 0.0f;
 	desc.SlopeScaledDepthBias = 0.0f;

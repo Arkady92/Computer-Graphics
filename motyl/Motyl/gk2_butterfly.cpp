@@ -22,6 +22,8 @@ const float Butterfly::FLAP_TIME = 2.0f;
 const float Butterfly::WING_W = 0.15f;
 const float Butterfly::WING_H = 0.1f;
 const float Butterfly::WING_MAX_A = 8.0f * XM_PIDIV2 / 9.0f; //80 degrees
+const XMFLOAT4 Butterfly::BLUE_LIGHT_POS = XMFLOAT4(-1.0f, -1.0f, -1.0f, 1.0f);
+const XMFLOAT4 Butterfly::GREEN_LIGHT_POS = XMFLOAT4(1.0f, 1.0f, 1.0f, 1.0f);
 
 const unsigned int Butterfly::VB_STRIDE = sizeof(VertexPosNormal);
 const unsigned int Butterfly::VB_OFFSET = 0;
@@ -95,8 +97,16 @@ void Butterfly::InitializeRenderStates()
 //Setup render states used in various stages of the scene rendering
 {
 	D3D11_DEPTH_STENCIL_DESC dssDesc = m_device.DefaultDepthStencilDesc();
-	//Setup depth stencil state for writing
+	dssDesc.StencilEnable = true;
+	dssDesc.DepthWriteMask = D3D11_DEPTH_WRITE_MASK_ZERO;
+	dssDesc.BackFace.StencilFunc = D3D11_COMPARISON_NEVER;
+	dssDesc.FrontFace.StencilFunc = D3D11_COMPARISON_ALWAYS;
+	dssDesc.FrontFace.StencilPassOp = D3D11_STENCIL_OP_REPLACE;
 	m_dssWrite = m_device.CreateDepthStencilState(dssDesc);
+	//Setup depth stencil state for writing
+	dssDesc.DepthWriteMask = D3D11_DEPTH_WRITE_MASK_ALL;
+	dssDesc.FrontFace.StencilFunc = D3D11_COMPARISON_EQUAL;
+	dssDesc.FrontFace.StencilPassOp = D3D11_STENCIL_OP_KEEP;
 	//Setup depth stencil state for testing
 	m_dssTest = m_device.CreateDepthStencilState(dssDesc);
 
@@ -105,6 +115,11 @@ void Butterfly::InitializeRenderStates()
 	m_rsCounterClockwise = m_device.CreateRasterizerState(rsDesc);
 
 	D3D11_BLEND_DESC bsDesc = m_device.DefaultBlendDesc();
+
+	bsDesc.RenderTarget[0].BlendEnable = TRUE;
+	bsDesc.RenderTarget[0].SrcBlend = D3D11_BLEND_SRC_ALPHA;
+	bsDesc.RenderTarget[0].DestBlend = D3D11_BLEND_INV_SRC_ALPHA;
+
 	//Setup alpha blending
 	m_bsAlpha = m_device.CreateBlendState(bsDesc);
 }
@@ -215,7 +230,7 @@ void Butterfly::InitializeDodecahedron()
 XMFLOAT3 Butterfly::MoebiusStripPos(float t, float s)
 //Compute the position of point on the Moebius strip for parameters t and s
 {
-	float factor = MOEBIUS_R + MOEBIUS_W * s * XMScalarACos(0.5 * t);
+	float factor = MOEBIUS_R + MOEBIUS_W * s * XMScalarCos(0.5 * t);
 	return XMFLOAT3(XMScalarCos(t) * factor, XMScalarSin(t) * factor, MOEBIUS_W * s * sin(0.5 * t));
 }
 
@@ -264,12 +279,11 @@ XMFLOAT3 Butterfly::MoebiusStripNorm(float t, float s)
 void Butterfly::InitializeMoebiusStrip()
 //Create vertex and index buffers for the Moebius strip
 {
-	const int n = 128;
-	float dst = XM_PI * 2 / n;
-	VertexPosNormal vertices[n * 2];
+	float dst = XM_PI * 4 / MOEBIUS_N;
+	VertexPosNormal vertices[MOEBIUS_N * 2];
 	short idx = 0;
 	float t = 0;
-	for (size_t i = 0; i < n; i++)
+	for (size_t i = 0; i < MOEBIUS_N; i++)
 	{
 		vertices[idx].Pos = MoebiusStripPos(t, -1);
 		vertices[idx++].Normal = MoebiusStripNorm(t, -1);
@@ -277,19 +291,23 @@ void Butterfly::InitializeMoebiusStrip()
 		vertices[idx++].Normal = MoebiusStripNorm(t, 1);
 		t += dst;
 	}
-	m_vbMoebius = m_device.CreateVertexBuffer(vertices, 2 * n);
-	unsigned short indices[12 * n];
+	m_vbMoebius = m_device.CreateVertexBuffer(vertices, MOEBIUS_N * 2);
+
+	unsigned short indices[MOEBIUS_N * 6];
 	idx = 0;
-	for (size_t i = 0; i < n; i++)
+	for (size_t i = 0; i < MOEBIUS_N; i++)
 	{
-		indices[idx++] = i;
-		indices[idx++] = i + 2;
-		indices[idx++] = i + 1;
-		indices[idx++] = i;
-		indices[idx++] = i + 1;
-		indices[idx++] = i + 2;
+		indices[idx++] = (i * 2) % (MOEBIUS_N * 2);
+		indices[idx++] = (i * 2 + 1) % (MOEBIUS_N * 2);
+		indices[idx++] = (i * 2 + 2) % (MOEBIUS_N * 2);
 	}
-	m_ibMoebius = m_device.CreateIndexBuffer(indices, 12 * n);
+	for (size_t i = 0; i < MOEBIUS_N; i++)
+	{
+		indices[idx++] = (i * 2 + 1) % (MOEBIUS_N * 2);
+		indices[idx++] = (i * 2 + 3) % (MOEBIUS_N * 2);
+		indices[idx++] = (i * 2 + 2) % (MOEBIUS_N * 2);
+	}
+	m_ibMoebius = m_device.CreateIndexBuffer(indices, MOEBIUS_N * 6);
 }
 
 void Butterfly::InitializeButterfly()
@@ -372,6 +390,11 @@ void Butterfly::UpdateCamera()
 	m_context->UpdateSubresource(m_cbView.get(), 0, 0, &viewMtx, 0, 0);
 }
 
+void Butterfly::UpdateCamera(XMMATRIX &matrix)
+{
+	m_context->UpdateSubresource(m_cbView.get(), 0, 0, &matrix, 0, 0);
+}
+
 void Butterfly::UpdateButterfly(float dtime)
 //Compute the matrices for butterfly wings. Position on the strip is determined based on time
 {
@@ -414,7 +437,8 @@ void Butterfly::SetLight1()
 	XMFLOAT4 positions[3];
 	ZeroMemory(positions, sizeof(XMFLOAT4) * 3);
 	positions[0] = m_camera.GetPosition(); //white light position
-	//TODO: write the rest of code here
+	positions[1] = BLUE_LIGHT_POS; //blue light position
+	positions[2] = GREEN_LIGHT_POS; //green light position
 	m_context->UpdateSubresource(m_cbLightPos.get(), 0, 0, positions, 0, 0);
 
 	XMFLOAT4 colors[5];
@@ -422,7 +446,8 @@ void Butterfly::SetLight1()
 	colors[0] = XMFLOAT4(0.2f, 0.2f, 0.2f, 1.0f); //ambient color
 	colors[1] = XMFLOAT4(1.0f, 0.8f, 1.0f, 100.0f); //surface [ka, kd, ks, m]
 	colors[2] = XMFLOAT4(1.0f, 1.0f, 1.0f, 1.0f); //white light color
-	//TODO: write the rest of code here
+	colors[3] = XMFLOAT4(0.0f, 0.0f, 1.0f, 1.0f); //blue light color
+	colors[4] = XMFLOAT4(0.0f, 1.0f, 0.0f, 1.0f); //green light color
 	m_context->UpdateSubresource(m_cbLightColors.get(), 0, 0, colors, 0, 0);
 }
 
@@ -487,21 +512,14 @@ void Butterfly::DrawDodecahedron(bool colors)
 void Butterfly::DrawMoebiusStrip()
 //Draw the Moebius strip
 {
-	XMMATRIX matrixes[4];
-	matrixes[0] = XMMatrixIdentity();
-	matrixes[1] = XMMatrixRotationX(XM_PI);
-	matrixes[2] = XMMatrixRotationY(XM_PI);
-	matrixes[3] = XMMatrixRotationZ(XM_PI);
-
-	for (size_t i = 0; i < 4; i++)
-	{
-		const XMMATRIX worldMtx = XMMatrixIdentity() * matrixes[i];
-		m_context->UpdateSubresource(m_cbWorld.get(), 0, 0, &worldMtx, 0, 0);
-		ID3D11Buffer* b = m_vbMoebius.get();
-		m_context->IASetVertexBuffers(0, 1, &b, &VB_STRIDE, &VB_OFFSET);
-		m_context->IASetIndexBuffer(m_ibMoebius.get(), DXGI_FORMAT_R16_UINT, 0);
-		m_context->DrawIndexed(128 * 12, 0, 0);
-	}
+	const XMMATRIX worldMtx = XMMatrixIdentity();
+	XMFLOAT4 color{ 1.0f, 1.0f, 1.0f, 1.0f };
+	m_context->UpdateSubresource(m_cbSurfaceColor.get(), 0, 0, &color, 0, 0);
+	m_context->UpdateSubresource(m_cbWorld.get(), 0, 0, &worldMtx, 0, 0);
+	ID3D11Buffer* b = m_vbMoebius.get();
+	m_context->IASetVertexBuffers(0, 1, &b, &VB_STRIDE, &VB_OFFSET);
+	m_context->IASetIndexBuffer(m_ibMoebius.get(), DXGI_FORMAT_R16_UINT, 0);
+	m_context->DrawIndexed(MOEBIUS_N * 6, 0, 0);
 }
 
 void Butterfly::DrawButterfly()
@@ -529,6 +547,24 @@ void Butterfly::DrawMirroredWorld(int i)
 
 	//Restore rendering state to it's original values
 
+	const XMMATRIX worldMtx = XMMatrixIdentity() * m_dodecahedronMtx[i];
+	m_context->UpdateSubresource(m_cbWorld.get(), 0, 0, &worldMtx, 0, 0);
+	ID3D11Buffer* b = m_vbPentagon.get();
+	m_context->IASetVertexBuffers(0, 1, &b, &VB_STRIDE, &VB_OFFSET);
+	m_context->IASetIndexBuffer(m_ibPentagon.get(), DXGI_FORMAT_R16_UINT, 0);
+	m_context->OMSetDepthStencilState(m_dssWrite.get(), i + 1);
+	m_context->DrawIndexed(9, 0, 0);
+	m_context->OMSetDepthStencilState(m_dssTest.get(), i + 1);
+	m_context->RSSetState(m_rsCounterClockwise.get());
+	UpdateCamera(m_mirrorMtx[i] * m_camera.GetViewMatrix());
+	DrawMoebiusStrip();
+	DrawButterfly();
+	SetLight0();
+	DrawDodecahedron(false);
+	SetLight1();
+	m_context->RSSetState(NULL);
+	m_context->OMSetDepthStencilState(NULL, 0);
+	UpdateCamera();
 }
 
 void Butterfly::Render()

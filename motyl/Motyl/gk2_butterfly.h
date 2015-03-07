@@ -52,6 +52,10 @@ namespace gk2
 		//maximum angle between wings
 		static const float WING_MAX_A;
 
+		static const XMFLOAT4 BLUE_LIGHT_POS;
+
+		static const XMFLOAT4 GREEN_LIGHT_POS;
+
 		//Various D3D constants
 		static const unsigned int VB_STRIDE;
 		static const unsigned int VB_OFFSET;
@@ -153,6 +157,8 @@ namespace gk2
 
 		//Updates camera-related constant buffers
 		void UpdateCamera();
+
+		void UpdateCamera(XMMATRIX &matrix);
 		//Updates wing's matrices
 		void UpdateButterfly(float dt);
 
