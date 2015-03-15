@@ -73,6 +73,12 @@ void Butterfly::InitializeShaders()
 	m_vertexShader = m_device.CreateVertexShader(vsByteCode);
 	m_pixelShader = m_device.CreatePixelShader(psByteCode);
 	m_inputLayout = m_device.CreateInputLayout<VertexPosNormal>(vsByteCode);
+
+	vsByteCode = m_device.CompileD3DShader(ShaderFile, "VS_Bilboard", "vs_4_0");
+	psByteCode = m_device.CompileD3DShader(ShaderFile, "PS_Bilboard", "ps_4_0");
+	m_vertexShader2 = m_device.CreateVertexShader(vsByteCode);
+	m_pixelShader2 = m_device.CreatePixelShader(psByteCode);
+	m_inputLayout2 = m_device.CreateInputLayout<VertexPosNormal>(vsByteCode);
 }
 
 void Butterfly::InitializeConstantBuffers()
@@ -119,9 +125,26 @@ void Butterfly::InitializeRenderStates()
 	bsDesc.RenderTarget[0].BlendEnable = TRUE;
 	bsDesc.RenderTarget[0].SrcBlend = D3D11_BLEND_SRC_ALPHA;
 	bsDesc.RenderTarget[0].DestBlend = D3D11_BLEND_INV_SRC_ALPHA;
+	bsDesc.RenderTarget[0].BlendOp = D3D11_BLEND_OP_ADD;
+	bsDesc.RenderTarget[0].SrcBlendAlpha = D3D11_BLEND_ONE;
+	bsDesc.RenderTarget[0].DestBlendAlpha = D3D11_BLEND_ONE;
+	bsDesc.RenderTarget[0].BlendOpAlpha = D3D11_BLEND_OP_ADD;
 
 	//Setup alpha blending
 	m_bsAlpha = m_device.CreateBlendState(bsDesc);
+
+	D3D11_BLEND_DESC bsDesc2 = m_device.DefaultBlendDesc();
+
+	bsDesc2.RenderTarget[0].BlendEnable = TRUE;
+	bsDesc2.RenderTarget[0].SrcBlend = D3D11_BLEND_SRC_COLOR;
+	bsDesc2.RenderTarget[0].DestBlend = D3D11_BLEND_INV_SRC_COLOR;
+	bsDesc2.RenderTarget[0].BlendOp = D3D11_BLEND_OP_ADD;
+	bsDesc2.RenderTarget[0].SrcBlendAlpha = D3D11_BLEND_ONE;
+	bsDesc2.RenderTarget[0].DestBlendAlpha = D3D11_BLEND_ONE;
+	bsDesc2.RenderTarget[0].BlendOpAlpha = D3D11_BLEND_OP_ADD;
+
+	//Setup alpha blending
+	m_bsBillboard = m_device.CreateBlendState(bsDesc2);
 }
 
 void Butterfly::InitializeCamera()
@@ -263,7 +286,9 @@ XMMATRIX Butterfly::MoebiusStripMatrix(float t, float s)
 	nPt.m128_f32[3] = 0;
 	nPst.m128_f32[3] = 0;
 	p.m128_f32[3] = 1;
-	return XMMATRIX(nPt, nPst, nPs, p);
+	/*XMMATRIX result;
+	result.r[0] = */
+	return XMMATRIX(nPs, nPt, nPst, p);
 }
 
 XMFLOAT3 Butterfly::MoebiusStripNorm(float t, float s)
@@ -313,13 +338,52 @@ void Butterfly::InitializeMoebiusStrip()
 void Butterfly::InitializeButterfly()
 //Create vertex and index buffers for the butterfly wing
 {
-	//TODO: write code here
+	VertexPosNormal vertices[8];
+	vertices[0].Pos = XMFLOAT3(-1, 1, 0);
+	vertices[1].Pos = XMFLOAT3(1, 1, 0);
+	vertices[2].Pos = XMFLOAT3(-1, -1, 0);
+	vertices[3].Pos = XMFLOAT3(1, -1, 0);
+	vertices[4].Pos = XMFLOAT3(-1, 1, 0);
+	vertices[5].Pos = XMFLOAT3(1, 1, 0);
+	vertices[6].Pos = XMFLOAT3(-1, -1, 0);
+	vertices[7].Pos = XMFLOAT3(1, -1, 0);
+	for (size_t i = 0; i < 8; i++)
+	{
+		vertices[i].Normal = XMFLOAT3(0, 0, (i % 2)* -2 + 1);
+	}
+	unsigned short indices[]
+	{
+		0, 1, 2,
+			1, 3, 2,
+			4, 6, 5,
+			5, 6, 7
+	};
+	m_vbWing = m_device.CreateVertexBuffer(vertices, 8);
+	m_ibWing = m_device.CreateIndexBuffer(indices, 12);
+
 }
 
 void Butterfly::InitializeBilboards()
 //Initialize bilboard resources (vertex, pixel shaders, input layout, vertex, index buffers etc.)
 {
-
+	VertexPos vertices[4];
+	vertices[0].Pos = XMFLOAT3(-1, 1, 0);
+	vertices[1].Pos = XMFLOAT3(1, 1, 0);
+	vertices[2].Pos = XMFLOAT3(-1, -1, 0);
+	vertices[3].Pos = XMFLOAT3(1, -1, 0);
+	unsigned short indices[]
+	{
+		0, 1, 2,
+			1, 3, 2
+	};
+	m_vbBillboard = m_device.CreateVertexBuffer(vertices, 4);
+	m_ibBillboard = m_device.CreateIndexBuffer(indices, 6);
+	XMFLOAT4 cameraPosition = m_camera.GetPosition();
+	XMMATRIX invView = m_camera.GetViewMatrix();
+	XMVECTOR * vector = new XMVECTOR();
+	invView = XMMatrixInverse(vector, invView);
+	delete(vector);
+	m_billboardMtx = XMMatrixTranslation(0, -DODECAHEDRON_H * 0.5, 0) * XMMatrixScaling(0.5, 0.5, 0.5) * XMMatrixTranslation(-cameraPosition.x, -cameraPosition.y, -cameraPosition.z) * invView;
 }
 
 void Butterfly::SetShaders()
@@ -328,6 +392,14 @@ void Butterfly::SetShaders()
 	m_context->IASetPrimitiveTopology(D3D11_PRIMITIVE_TOPOLOGY_TRIANGLELIST);
 	m_context->VSSetShader(m_vertexShader.get(), 0, 0);
 	m_context->PSSetShader(m_pixelShader.get(), 0, 0);
+}
+
+void Butterfly::SetBillboardShaders()
+{
+	m_context->IASetInputLayout(m_inputLayout2.get());
+	m_context->IASetPrimitiveTopology(D3D11_PRIMITIVE_TOPOLOGY_TRIANGLELIST);
+	m_context->VSSetShader(m_vertexShader2.get(), 0, 0);
+	m_context->PSSetShader(m_pixelShader2.get(), 0, 0);
 }
 
 void Butterfly::SetConstantBuffers()
@@ -362,6 +434,10 @@ void Butterfly::UnloadContent()
 	m_vertexShader.reset();
 	m_pixelShader.reset();
 	m_inputLayout.reset();
+
+	m_vertexShader2.reset();
+	m_pixelShader2.reset();
+	m_inputLayout2.reset();
 
 	m_dssWrite.reset();
 	m_dssTest.reset();
@@ -411,7 +487,8 @@ void Butterfly::UpdateButterfly(float dtime)
 	if (a > WING_MAX_A)
 		a = 2 * WING_MAX_A - a;
 
-	//TODO: write the rest of code here
+	m_wingMtx[0] = XMMatrixTranslation(1, 0, 0) * XMMatrixScaling(WING_H * 0.5, WING_W * 0.5, 1) * XMMatrixRotationY(XM_PI * 0.5 + a) * MoebiusStripMatrix(t, 0);
+	m_wingMtx[1] = XMMatrixTranslation(1, 0, 0) * XMMatrixScaling(WING_H * 0.5, WING_W * 0.5, 1) * XMMatrixRotationY(XM_PI * 0.5 - a) * MoebiusStripMatrix(t, 0);
 }
 
 void Butterfly::SetLight0()
@@ -525,13 +602,32 @@ void Butterfly::DrawMoebiusStrip()
 void Butterfly::DrawButterfly()
 //Draw the butterfly
 {
-	//TODO: write code here
+	for (size_t i = 0; i < 2; i++)
+	{
+		const XMMATRIX worldMtx = XMMatrixIdentity() * m_wingMtx[i];
+		m_context->UpdateSubresource(m_cbWorld.get(), 0, 0, &worldMtx, 0, 0);
+		ID3D11Buffer* b = m_vbWing.get();
+		m_context->IASetVertexBuffers(0, 1, &b, &VB_STRIDE, &VB_OFFSET);
+		m_context->IASetIndexBuffer(m_ibWing.get(), DXGI_FORMAT_R16_UINT, 0);
+		m_context->DrawIndexed(12, 0, 0);
+	}
 }
 
 void Butterfly::DrawBilboards()
 //Setup bilboards rendering and draw them
 {
+	m_context->OMSetBlendState(m_bsBillboard.get(), 0, BS_MASK);
+	SetBillboardShaders();
 
+	const XMMATRIX worldMtx = XMMatrixIdentity() * m_billboardMtx;
+	m_context->UpdateSubresource(m_cbWorld.get(), 0, 0, &worldMtx, 0, 0);
+	ID3D11Buffer* b = m_vbBillboard.get();
+	m_context->IASetVertexBuffers(0, 1, &b, &VB_STRIDE, &VB_OFFSET);
+	m_context->IASetIndexBuffer(m_ibBillboard.get(), DXGI_FORMAT_R16_UINT, 0);
+	m_context->DrawIndexed(6, 0, 0);
+
+	SetShaders();
+	m_context->OMSetBlendState(0, 0, BS_MASK);
 }
 
 void Butterfly::DrawMirroredWorld(int i)

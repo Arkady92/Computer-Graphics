@@ -9,6 +9,7 @@ cbuffer cbWorld : register(b0) //Vertex Shader constant buffer slot 0
 cbuffer cbView : register(b1) //Vertex Shader constant buffer slot 1
 {
 	matrix viewMatrix;
+	matrix invViewMatrix;
 };
 
 cbuffer cbProj : register(b2) //Vertex Shader constant buffer slot 2
@@ -73,20 +74,23 @@ float4 PS_Main(PSInput i) : SV_TARGET
 	float3 viewVec = normalize(i.viewVec);
 	float3 normal = normalize(i.norm);
 	float3 color = ambientColor.xyz * surface.x;
-
+	float specAlpha = 0.0f;
 	
 	float3 lightVec;
 	float3 halfVec;
+	float nh;
 	//Light0
 	if (lightColors[0].w)
 	{
 		lightVec = normalize(i.lightVec0);
 		halfVec = normalize(viewVec + lightVec);
 		color += lightColors[0].xyz * surfaceColor.xyz * surface.y * clamp(dot(normal, lightVec), 0.0f, 1.0f); //diffuse Color
-		float nh = dot(normal, halfVec);
+		nh = dot(normal, halfVec);
 		nh = clamp(nh, 0.0f, 1.0f);
 		nh = pow(nh, surface.w);
-		color += lightColors[0].xyz * surface.z * nh; //specular Color
+		nh *= surface.z;
+		specAlpha += nh;
+		color += lightColors[0].xyz * nh; //specular Color
 	}
 	//Light1
 	if (lightColors[1].w)
@@ -94,7 +98,12 @@ float4 PS_Main(PSInput i) : SV_TARGET
 		lightVec = normalize(i.lightVec1);
 		halfVec = normalize(viewVec + lightVec);
 		color += lightColors[1].xyz * surfaceColor.xyz * surface.y * clamp(dot(normal, lightVec), 0.0f, 1.0f); //diffuse Color
-		color += lightColors[1].xyz * surface.z * pow(clamp(dot(normal, halfVec), 0.0f, 1.0f), surface.w); //specular Color
+		nh = dot(normal, halfVec);
+		nh = clamp(nh, 0.0f, 1.0f);
+		nh = pow(nh, surface.w);
+		nh *= surface.z;
+		specAlpha += nh;
+		color += lightColors[1].xyz * nh; //specular Color
 	}
 	//Light2
 	if (lightColors[2].w)
@@ -102,7 +111,47 @@ float4 PS_Main(PSInput i) : SV_TARGET
 		lightVec = normalize(i.lightVec2);
 		halfVec = normalize(viewVec + lightVec);
 		color += lightColors[2].xyz * surfaceColor.xyz * surface.y * clamp(dot(normal, lightVec), 0.0f, 1.0f); //diffuse Color
-		color += lightColors[2].xyz * surface.z * pow(clamp(dot(normal, halfVec), 0.0f, 1.0f), surface.w); //specular Color
+		nh = dot(normal, halfVec);
+		nh = clamp(nh, 0.0f, 1.0f);
+		nh = pow(nh, surface.w);
+		nh *= surface.z;
+		specAlpha += nh;
+		color += lightColors[2].xyz * nh; //specular Color
 	}
-	return float4(color, surfaceColor.w);
+	return float4(color, surfaceColor.w+specAlpha);
+}
+
+struct VSBilboardInput
+{
+	float3 pos : POSITION;
+};
+
+struct PSBilboardInput
+{
+	float4 pos : SV_POSITION;
+	float2 tex : TEXCOORD0;
+};
+
+
+PSBilboardInput VS_Bilboard(VSBilboardInput i)
+{
+	PSBilboardInput o = (PSBilboardInput)0;
+	o.pos = float4(i.pos, 1.0f);
+	float4 zero = float4(0.0f, 0.0f, 0.0f, 1.0f);
+	zero = -mul(invViewMatrix, zero);
+	o.pos = mul(invViewMatrix, o.pos);
+	o.pos += zero;
+	o.pos.w = 1.0f;
+	o.pos = mul(worldMatrix, o.pos);
+	o.pos = mul(viewMatrix, o.pos);
+	o.pos = mul(projMatrix, o.pos);
+	o.tex = i.pos.xy;
+	return o;
+}
+
+float4 PS_Bilboard(PSBilboardInput i) : SV_TARGET
+{
+	float d = sqrt(i.tex.x*i.tex.x + i.tex.y*i.tex.y);
+	d = clamp(1 - d, 0.0f, 1.0f);
+	return surfaceColor*d;
 }

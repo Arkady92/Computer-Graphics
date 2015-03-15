@@ -52,10 +52,6 @@ namespace gk2
 		//maximum angle between wings
 		static const float WING_MAX_A;
 
-		static const XMFLOAT4 BLUE_LIGHT_POS;
-
-		static const XMFLOAT4 GREEN_LIGHT_POS;
-
 		//Various D3D constants
 		static const unsigned int VB_STRIDE;
 		static const unsigned int VB_OFFSET;
@@ -63,6 +59,10 @@ namespace gk2
 
 		//Table of colors for dodecahedron's faces
 		static const XMFLOAT4 COLORS[12];
+
+		//Static light positions
+		static const XMFLOAT4 GREEN_LIGHT_POS;
+		static const XMFLOAT4 BLUE_LIGHT_POS;
 
 		//Projection matrix
 		XMMATRIX m_projMtx;
@@ -72,15 +72,19 @@ namespace gk2
 		XMMATRIX m_mirrorMtx[12];
 		//Butterfly's wings -> World
 		XMMATRIX m_wingMtx[2];
+		XMMATRIX m_bilboardMtx;
 
 		//Camera helper
 		gk2::Camera m_camera;
 
-		//Shader's
+		//Shaders
 		std::shared_ptr<ID3D11VertexShader> m_vertexShader;
 		std::shared_ptr<ID3D11PixelShader> m_pixelShader;
+		std::shared_ptr<ID3D11VertexShader> m_vsBilboard;
+		std::shared_ptr<ID3D11PixelShader> m_psBilboard;
 		//VertexPosNormal input layout
 		std::shared_ptr<ID3D11InputLayout> m_inputLayout;
+		std::shared_ptr<ID3D11InputLayout> m_ilBilboard;
 
 		//Box's vertex buffer
 		std::shared_ptr<ID3D11Buffer> m_vbBox;
@@ -98,6 +102,10 @@ namespace gk2
 		std::shared_ptr<ID3D11Buffer> m_vbWing;
 		//Wing's index buffer
 		std::shared_ptr<ID3D11Buffer> m_ibWing;
+		//Bilboard's vertexBuffer
+		std::shared_ptr<ID3D11Buffer> m_vbBilboard;
+		//Bilboard's indexBuffer
+		std::shared_ptr<ID3D11Buffer> m_ibBilboard;
 
 		//Depth stencil state used to fill the stencil buffer
 		std::shared_ptr<ID3D11DepthStencilState> m_dssWrite;
@@ -107,6 +115,8 @@ namespace gk2
 		std::shared_ptr<ID3D11RasterizerState> m_rsCounterClockwise;
 		//Blend state used to draw dodecahedron faced with alpha blending.
 		std::shared_ptr<ID3D11BlendState> m_bsAlpha;
+		//Blend state used to draw bilboards.
+		std::shared_ptr<ID3D11BlendState> m_bsAdd;
 
 		//Shader's constant buffer containing Local -> World matrix
 		std::shared_ptr<ID3D11Buffer> m_cbWorld;
@@ -131,9 +141,6 @@ namespace gk2
 		// Return the s-derivative of point on the Moebius strip for parameters t and s
 		static XMVECTOR MoebiusStripDs(float t, float s);
 
-		static XMMATRIX MoebiusStripMatrix(float t, float s);
-		static XMFLOAT3 MoebiusStripNorm(float t, float s);
-
 		//Initializes shaders
 		void InitializeShaders();
 		//Initializes constant buffers
@@ -156,9 +163,7 @@ namespace gk2
 		void InitializeBilboards();
 
 		//Updates camera-related constant buffers
-		void UpdateCamera();
-
-		void UpdateCamera(XMMATRIX &matrix);
+		void UpdateCamera(const XMMATRIX& view);
 		//Updates wing's matrices
 		void UpdateButterfly(float dt);
 
@@ -166,6 +171,8 @@ namespace gk2
 		void SetShaders();
 		//Binds constant buffers to shaders
 		void SetConstantBuffers();
+		//Binds bilboard shaders to the device context
+		void SetBilboardShaders();
 		//Sets up one white positional light at the camera position
 		void SetLight0();
 		//Sets up one white positional light at the camera position and two additional lights, green and blue

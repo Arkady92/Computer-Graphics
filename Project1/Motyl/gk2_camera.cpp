@@ -48,7 +48,7 @@ XMMATRIX Camera::GetViewMatrix()
 
 void Camera::GetViewMatrix(XMMATRIX& viewMtx)
 {
-	viewMtx = XMMatrixRotationY(-m_angleY) * XMMatrixRotationX(-m_angleX) * XMMatrixTranslation(0.0f, 0.0f, m_distance);
+	viewMtx = XMMatrixRotationX(m_angleX) * XMMatrixRotationY(-m_angleY) * XMMatrixTranslation(0.0f, 0.0f, m_distance);
 }
 
 XMFLOAT4 Camera::GetPosition()
@@ -57,7 +57,7 @@ XMFLOAT4 Camera::GetPosition()
 	GetViewMatrix(viewMtx);
 	XMVECTOR det;
 	viewMtx = XMMatrixInverse(&det, viewMtx);
-	XMMATRIX alt = XMMatrixTranslation(0.0f, 0.0f, -m_distance) * XMMatrixRotationX(m_angleX) * XMMatrixRotationY(m_angleY);
+	XMMATRIX alt = XMMatrixTranslation(0.0f, 0.0f, -m_distance) * XMMatrixRotationY(m_angleY) * XMMatrixRotationX(-m_angleX);
 	XMFLOAT3 res(0.0f, 0.0f, 0.0f);
 	XMVECTOR transl = XMVector3TransformCoord(XMLoadFloat3(&res), viewMtx);
 	XMStoreFloat3(&res, transl);
