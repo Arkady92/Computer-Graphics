@@ -59,6 +59,7 @@ namespace gk2
 
 		//Table of colors for dodecahedron's faces
 		static const XMFLOAT4 COLORS[12];
+		static const XMFLOAT4 LIGHTCOLORS[3];
 
 		//Static light positions
 		static const XMFLOAT4 GREEN_LIGHT_POS;
@@ -72,7 +73,7 @@ namespace gk2
 		XMMATRIX m_mirrorMtx[12];
 		//Butterfly's wings -> World
 		XMMATRIX m_wingMtx[2];
-		XMMATRIX m_bilboardMtx;
+		XMMATRIX m_bilboardMtx[3];
 
 		//Camera helper
 		gk2::Camera m_camera;
@@ -166,6 +167,7 @@ namespace gk2
 		void UpdateCamera(const XMMATRIX& view);
 		//Updates wing's matrices
 		void UpdateButterfly(float dt);
+		void UpdateBilboards();
 
 		//Binds shaders to the device context
 		void SetShaders();

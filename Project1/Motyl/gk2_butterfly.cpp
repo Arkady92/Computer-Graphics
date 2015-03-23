@@ -29,21 +29,28 @@ const unsigned int Butterfly::BS_MASK = 0xffffffff;
 
 const XMFLOAT4 Butterfly::GREEN_LIGHT_POS = XMFLOAT4(1.0f, 1.0f, 1.0f, 1.0f);
 const XMFLOAT4 Butterfly::BLUE_LIGHT_POS = XMFLOAT4(-1.0f, -1.0f, -1.0f, 1.0f);
-const XMFLOAT4 Butterfly::COLORS[] = 
-	{ 
-		XMFLOAT4(253.0f/255.0f, 198.0f/255.0f, 137.0f/255.0f, 100.0f/255.0f),
-		XMFLOAT4(255.0f/255.0f, 247.0f/255.0f, 153.0f/255.0f, 100.0f/255.0f),
-		XMFLOAT4(196.0f/255.0f, 223.0f/255.0f, 155.0f/255.0f, 100.0f/255.0f),
-		XMFLOAT4(162.0f/255.0f, 211.0f/255.0f, 156.0f/255.0f, 100.0f/255.0f),
-		XMFLOAT4(130.0f/255.0f, 202.0f/255.0f, 156.0f/255.0f, 100.0f/255.0f),
-		XMFLOAT4(122.0f/255.0f, 204.0f/255.0f, 200.0f/255.0f, 100.0f/255.0f),
-		XMFLOAT4(109.0f/255.0f, 207.0f/255.0f, 246.0f/255.0f, 100.0f/255.0f),
-		XMFLOAT4(125.0f/255.0f, 167.0f/255.0f, 216.0f/255.0f, 100.0f/255.0f),
-		XMFLOAT4(131.0f/255.0f, 147.0f/255.0f, 202.0f/255.0f, 100.0f/255.0f),
-		XMFLOAT4(135.0f/255.0f, 129.0f/255.0f, 189.0f/255.0f, 100.0f/255.0f),
-		XMFLOAT4(161.0f/255.0f, 134.0f/255.0f, 190.0f/255.0f, 100.0f/255.0f),
-		XMFLOAT4(244.0f/255.0f, 154.0f/255.0f, 193.0f/255.0f, 100.0f/255.0f)
-	};
+const XMFLOAT4 Butterfly::COLORS[] =
+{
+	XMFLOAT4(253.0f / 255.0f, 198.0f / 255.0f, 137.0f / 255.0f, 100.0f / 255.0f),
+	XMFLOAT4(255.0f / 255.0f, 247.0f / 255.0f, 153.0f / 255.0f, 100.0f / 255.0f),
+	XMFLOAT4(196.0f / 255.0f, 223.0f / 255.0f, 155.0f / 255.0f, 100.0f / 255.0f),
+	XMFLOAT4(162.0f / 255.0f, 211.0f / 255.0f, 156.0f / 255.0f, 100.0f / 255.0f),
+	XMFLOAT4(130.0f / 255.0f, 202.0f / 255.0f, 156.0f / 255.0f, 100.0f / 255.0f),
+	XMFLOAT4(122.0f / 255.0f, 204.0f / 255.0f, 200.0f / 255.0f, 100.0f / 255.0f),
+	XMFLOAT4(109.0f / 255.0f, 207.0f / 255.0f, 246.0f / 255.0f, 100.0f / 255.0f),
+	XMFLOAT4(125.0f / 255.0f, 167.0f / 255.0f, 216.0f / 255.0f, 100.0f / 255.0f),
+	XMFLOAT4(131.0f / 255.0f, 147.0f / 255.0f, 202.0f / 255.0f, 100.0f / 255.0f),
+	XMFLOAT4(135.0f / 255.0f, 129.0f / 255.0f, 189.0f / 255.0f, 100.0f / 255.0f),
+	XMFLOAT4(161.0f / 255.0f, 134.0f / 255.0f, 190.0f / 255.0f, 100.0f / 255.0f),
+	XMFLOAT4(244.0f / 255.0f, 154.0f / 255.0f, 193.0f / 255.0f, 100.0f / 255.0f)
+};
+
+const XMFLOAT4 Butterfly::LIGHTCOLORS[] =
+{
+	XMFLOAT4(0.0f, 1.0f, 0.0f, 1.0f),
+	XMFLOAT4(0.0f, 0.0f, 1.0f, 1.0f),
+	XMFLOAT4(1.0f, 1.0f, 1.0f, 1.0f)
+};
 
 void* Butterfly::operator new(size_t size)
 {
@@ -89,7 +96,7 @@ void Butterfly::InitializeConstantBuffers()
 	desc.Usage = D3D11_USAGE_DEFAULT;
 	m_cbWorld = m_device.CreateBuffer(desc);
 	m_cbProj = m_device.CreateBuffer(desc);
-	desc.ByteWidth = sizeof(XMMATRIX)*2;
+	desc.ByteWidth = sizeof(XMMATRIX) * 2;
 	m_cbView = m_device.CreateBuffer(desc);
 	desc.ByteWidth = sizeof(XMFLOAT4) * 3;
 	m_cbLightPos = m_device.CreateBuffer(desc);
@@ -110,7 +117,7 @@ void Butterfly::InitializeRenderStates()
 	dssDesc.FrontFace.StencilFunc = D3D11_COMPARISON_ALWAYS;
 	dssDesc.FrontFace.StencilPassOp = D3D11_STENCIL_OP_REPLACE;
 	m_dssWrite = m_device.CreateDepthStencilState(dssDesc);
-	
+
 	dssDesc.DepthWriteMask = D3D11_DEPTH_WRITE_MASK_ALL;
 	dssDesc.FrontFace.StencilFunc = D3D11_COMPARISON_EQUAL;
 	dssDesc.FrontFace.StencilPassOp = D3D11_STENCIL_OP_KEEP;
@@ -129,8 +136,9 @@ void Butterfly::InitializeRenderStates()
 	bsDesc.RenderTarget[0].DestBlendAlpha = D3D11_BLEND_ZERO;
 	bsDesc.RenderTarget[0].BlendOpAlpha = D3D11_BLEND_OP_ADD;
 	m_bsAlpha = m_device.CreateBlendState(bsDesc);
+
 	bsDesc.RenderTarget[0].SrcBlend = D3D11_BLEND_SRC_COLOR;
-	bsDesc.RenderTarget[0].DestBlend = D3D11_BLEND_DEST_COLOR;
+	bsDesc.RenderTarget[0].DestBlend = D3D11_BLEND_ONE;
 	bsDesc.RenderTarget[0].BlendOp = D3D11_BLEND_OP_ADD;
 	m_bsAdd = m_device.CreateBlendState(bsDesc);
 }
@@ -201,7 +209,7 @@ void Butterfly::InitializeBox()
 void Butterfly::InitializePentagon()
 {
 	VertexPosNormal vertices[5];
-	float a=0, da = XM_2PI / 5.0f;
+	float a = 0, da = XM_2PI / 5.0f;
 	for (int i = 0; i < 5; ++i, a -= da)
 	{
 		float sina, cosa;
@@ -217,20 +225,20 @@ void Butterfly::InitializePentagon()
 void Butterfly::InitializeDodecahedron()
 //Compute dodecahedronMtx and mirrorMtx
 {
-	m_dodecahedronMtx[0] = XMMatrixRotationX(XM_PIDIV2) * XMMatrixTranslation(0, -DODECAHEDRON_H/2, 0) * XMMatrixScaling(2.0f, 2.0f, 2.0f);
+	m_dodecahedronMtx[0] = XMMatrixRotationX(XM_PIDIV2) * XMMatrixTranslation(0, -DODECAHEDRON_H / 2, 0) * XMMatrixScaling(2.0f, 2.0f, 2.0f);
 	float da = XM_2PI / 5.0f, a = da;
-	for (int i = 1; i < 6; ++i, a+= da)
+	for (int i = 1; i < 6; ++i, a += da)
 	{
 		m_dodecahedronMtx[i] =
 			XMMatrixRotationZ(XM_PIDIV2) *
 			XMMatrixTranslation(0, DODECAHEDRON_R, 0) *
 			XMMatrixRotationX(DODECAHEDRON_A - XM_PIDIV2) *
-			XMMatrixTranslation(0, -DODECAHEDRON_H/2, DODECAHEDRON_R) *
+			XMMatrixTranslation(0, -DODECAHEDRON_H / 2, DODECAHEDRON_R) *
 			XMMatrixRotationY(a - XM_PIDIV2) *
 			XMMatrixScaling(2.0f, 2.0f, 2.0f);
 		m_dodecahedronMtx[i + 6] = m_dodecahedronMtx[i] * XMMatrixRotationZ(XM_PI);
 	}
-	m_dodecahedronMtx[6] = m_dodecahedronMtx[0]  * XMMatrixRotationZ(XM_PI);
+	m_dodecahedronMtx[6] = m_dodecahedronMtx[0] * XMMatrixRotationZ(XM_PI);
 	XMMATRIX scale = XMMatrixScaling(1, 1, -1);
 	XMVECTOR det;
 	for (int i = 0; i < 12; ++i)
@@ -249,11 +257,11 @@ XMVECTOR Butterfly::MoebiusStripDt(float t, float s)
 {
 	float rpwscost2 = MOEBIUS_R + MOEBIUS_W*s*XMScalarCos(0.5f*t);
 	float ws2sint2 = 0.5f*MOEBIUS_W*s*XMScalarSin(0.5f*t);
-	float cost =  XMScalarCos(t);
+	float cost = XMScalarCos(t);
 	float sint = XMScalarSin(t);
 	XMFLOAT3 dt(-rpwscost2 * sint - ws2sint2 * cost,
-				0.5f*MOEBIUS_W*s*cost,
-				rpwscost2 * cost - ws2sint2 * sint);
+		0.5f*MOEBIUS_W*s*cost,
+		rpwscost2 * cost - ws2sint2 * sint);
 	return XMVector3Normalize(XMLoadFloat3(&dt));
 }
 
@@ -274,10 +282,10 @@ void Butterfly::InitializeMoebiusStrip()
 	for (; i < 2 * MOEBIUS_N; ++i, t += dt)
 	{
 		vertices[2 * i].Pos = MoebiusStripPos(t, -1);
-		XMVECTOR normal =  XMVector3Normalize(XMVector3Cross(MoebiusStripDs(t, -1), MoebiusStripDt(t, -1)));
+		XMVECTOR normal = XMVector3Normalize(XMVector3Cross(MoebiusStripDs(t, -1), MoebiusStripDt(t, -1)));
 		XMStoreFloat3(&vertices[2 * i].Normal, normal);
 		vertices[2 * i + 1].Pos = MoebiusStripPos(t, 1);
-		normal =  XMVector3Normalize(XMVector3Cross(MoebiusStripDs(t, 1), MoebiusStripDt(t, 1)));
+		normal = XMVector3Normalize(XMVector3Cross(MoebiusStripDs(t, 1), MoebiusStripDt(t, 1)));
 		XMStoreFloat3(&vertices[2 * i + 1].Normal, normal);
 	}
 	m_vbMoebius = m_device.CreateVertexBuffer(vertices, 4 * MOEBIUS_N);
@@ -302,7 +310,7 @@ void Butterfly::InitializeButterfly()
 		{ XMFLOAT3(1.0f, -1.0f, 0.0f), XMFLOAT3(0.0f, 0.0f, 1.0f) },
 		{ XMFLOAT3(1.0f, 1.0f, 0.0f), XMFLOAT3(0.0f, 0.0f, 1.0f) },
 		{ XMFLOAT3(-1.0f, 1.0f, 0.0f), XMFLOAT3(0.0f, 0.0f, 1.0f) },
-	
+
 		{ XMFLOAT3(-1.0f, -1.0f, 0.0f), XMFLOAT3(0.0f, 0.0f, -1.0f) },
 		{ XMFLOAT3(-1.0f, 1.0f, 0.0f), XMFLOAT3(0.0f, 0.0f, -1.0f) },
 		{ XMFLOAT3(1.0f, 1.0f, 0.0f), XMFLOAT3(0.0f, 0.0f, -1.0f) },
@@ -327,12 +335,6 @@ void Butterfly::InitializeBilboards()
 	m_vbBilboard = m_device.CreateVertexBuffer(vertices, 4);
 	unsigned short indices[] = { 0, 1, 2, 0, 2, 3 };
 	m_ibBilboard = m_device.CreateIndexBuffer(indices, 6);
-	XMFLOAT4 cameraPosition = m_camera.GetPosition();
-	XMMATRIX invView = m_camera.GetViewMatrix();
-	XMVECTOR * vector = new XMVECTOR();
-	invView = XMMatrixInverse(vector, invView);
-	delete(vector);
-	m_bilboardMtx = XMMatrixTranslation(0, -DODECAHEDRON_H * 0.5, 0) * XMMatrixScaling(0.5, 0.5, 0.5) * XMMatrixTranslation(-cameraPosition.x, -cameraPosition.y, -cameraPosition.z) * invView;
 }
 
 void Butterfly::SetShaders()
@@ -353,7 +355,7 @@ void Butterfly::SetBilboardShaders()
 
 void Butterfly::SetConstantBuffers()
 {
-	ID3D11Buffer* vsb[] = { m_cbWorld.get(),  m_cbView.get(),  m_cbProj.get(), m_cbLightPos.get() };
+	ID3D11Buffer* vsb[] = { m_cbWorld.get(), m_cbView.get(), m_cbProj.get(), m_cbLightPos.get() };
 	m_context->VSSetConstantBuffers(0, 4, vsb);
 	ID3D11Buffer* psb[] = { m_cbLightColors.get(), m_cbSurfaceColor.get() };
 	m_context->PSSetConstantBuffers(0, 2, psb);
@@ -430,7 +432,7 @@ void Butterfly::UpdateButterfly(float dtime)
 	while (lap > LAP_TIME)
 		lap -= LAP_TIME;
 	//Value of the Moebius strip t parameter
-	float t = 2 * lap/LAP_TIME;
+	float t = 2 * lap / LAP_TIME;
 	//Angle between wing current and vertical position
 	float a = t * WING_MAX_A;
 	t *= XM_2PI;
@@ -448,8 +450,8 @@ void Butterfly::UpdateButterfly(float dtime)
 	tangentSpace.r[2] = norm;
 	tangentSpace.r[3] = pos;
 	m_wingMtx[0] = m_wingMtx[1] = XMMatrixTranslation(1.0f, 0.0f, 0.0f) *
-								  XMMatrixScaling(0.5f * WING_H, 0.5f * WING_W, 1.0f) *
-								  XMMatrixRotationY(XM_PIDIV2);
+		XMMatrixScaling(0.5f * WING_H, 0.5f * WING_W, 1.0f) *
+		XMMatrixRotationY(XM_PIDIV2);
 	m_wingMtx[0] *= XMMatrixRotationY(a) * tangentSpace;
 	m_wingMtx[1] *= XMMatrixRotationY(-a) * tangentSpace;
 }
@@ -496,9 +498,19 @@ void Butterfly::SetSurfaceColor(const XMFLOAT4& color)
 	m_context->UpdateSubresource(m_cbSurfaceColor.get(), 0, 0, &color, 0, 0);
 }
 
+void Butterfly::UpdateBilboards()
+{
+	XMFLOAT4 cameraPosition = m_camera.GetPosition();
+	XMMATRIX baseMatrix = XMMatrixScaling(0.5, 0.5, 0.5);
+	m_bilboardMtx[0] = XMMatrixTranslation(GREEN_LIGHT_POS.x, GREEN_LIGHT_POS.y, GREEN_LIGHT_POS.z) * baseMatrix;
+	m_bilboardMtx[1] = XMMatrixTranslation(BLUE_LIGHT_POS.x, BLUE_LIGHT_POS.y, BLUE_LIGHT_POS.z) * baseMatrix;
+	m_bilboardMtx[2] = XMMatrixTranslation(cameraPosition.x, cameraPosition.y, cameraPosition.z) * baseMatrix;
+}
+
 void Butterfly::Update(float dt)
 {
 	UpdateButterfly(dt);
+	UpdateBilboards();
 	static MouseState prevState;
 	MouseState currentState;
 	if (!m_mouse->GetState(currentState))
@@ -507,12 +519,12 @@ void Butterfly::Update(float dt)
 	if (prevState.isButtonDown(0))
 	{
 		POINT d = currentState.getMousePositionChange();
-		m_camera.Rotate(d.y/300.f, d.x/300.f);
+		m_camera.Rotate(d.y / 300.f, d.x / 300.f);
 	}
 	else if (prevState.isButtonDown(1))
 	{
 		POINT d = currentState.getMousePositionChange();
-		m_camera.Zoom(d.y/10.0f);
+		m_camera.Zoom(d.y / 10.0f);
 	}
 	else
 		change = false;
@@ -525,7 +537,7 @@ void Butterfly::DrawBox()
 {
 	const XMMATRIX worldMtx = XMMatrixIdentity();
 	m_context->UpdateSubresource(m_cbWorld.get(), 0, 0, &worldMtx, 0, 0);
-	
+
 	ID3D11Buffer* b = m_vbBox.get();
 	m_context->IASetVertexBuffers(0, 1, &b, &VB_STRIDE, &VB_OFFSET);
 	m_context->IASetIndexBuffer(m_ibBox.get(), DXGI_FORMAT_R16_UINT, 0);
@@ -579,14 +591,19 @@ void Butterfly::DrawBilboards()
 //Setup bilboards rendering and draw them
 {
 	SetBilboardShaders();
+	unsigned int stride = sizeof(VertexPos);
 	m_context->OMSetBlendState(m_bsAdd.get(), 0, BS_MASK);
 
-	const XMMATRIX worldMtx = XMMatrixIdentity() * m_bilboardMtx;
-	m_context->UpdateSubresource(m_cbWorld.get(), 0, 0, &worldMtx, 0, 0);
-	ID3D11Buffer* b = m_vbBilboard.get();
-	m_context->IASetVertexBuffers(0, 1, &b, &VB_STRIDE, &VB_OFFSET);
-	m_context->IASetIndexBuffer(m_ibBilboard.get(), DXGI_FORMAT_R16_UINT, 0);
-	m_context->DrawIndexed(6, 0, 0);
+	for (size_t i = 0; i < 3; i++)
+	{
+		const XMMATRIX worldMtx = XMMatrixIdentity() * m_bilboardMtx[i];
+		m_context->UpdateSubresource(m_cbWorld.get(), 0, 0, &worldMtx, 0, 0);
+		SetSurfaceColor(LIGHTCOLORS[i]);
+		ID3D11Buffer* b = m_vbBilboard.get();
+		m_context->IASetVertexBuffers(0, 1, &b, &stride, &VB_OFFSET);
+		m_context->IASetIndexBuffer(m_ibBilboard.get(), DXGI_FORMAT_R16_UINT, 0);
+		m_context->DrawIndexed(6, 0, 0);
+	}
 
 	m_context->OMSetBlendState(0, 0, BS_MASK);
 	SetShaders();
@@ -620,7 +637,7 @@ void Butterfly::DrawMirroredWorld(int i)
 	SetLight1();
 	m_context->RSSetState(NULL);
 	DrawBilboards();
-	
+
 	//Restore rendering state to it's original values
 	UpdateCamera(viewMtx);
 	m_context->OMSetDepthStencilState(NULL, 0);
@@ -634,7 +651,7 @@ void Butterfly::Render()
 	float clearColor[4] = { 1.0f, 1.0f, 1.0f, 1.0f };
 	m_context->ClearRenderTargetView(m_backBuffer.get(), clearColor);
 	m_context->ClearDepthStencilView(m_depthStencilView.get(), D3D11_CLEAR_DEPTH | D3D11_CLEAR_STENCIL, 1.0f, 0);
-	
+
 	//Render box with all three lights
 	SetLight1();
 	SetSurfaceColor(XMFLOAT4(1.0f, 1.0f, 1.0f, 1.0f));
