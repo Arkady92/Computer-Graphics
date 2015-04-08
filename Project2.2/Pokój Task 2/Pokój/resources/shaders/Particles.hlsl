@@ -60,18 +60,26 @@ void GS_Main(point GSInput inArray[1], inout TriangleStream<PSInput> ostream)
 
 	o.pos = float4(i.pos.x - dx, i.pos.y - dy, i.pos.z, 1.0f);
 	o.pos = mul(projMatrix, o.pos);
+	o.tex1 = float2(0, 1);
+	o.tex2 = float2(i.age / TimeToLive, 0.5);
 	ostream.Append(o);
 
 	o.pos = float4(i.pos.x - dy, i.pos.y + dx, i.pos.z, 1.0f);
 	o.pos = mul(projMatrix, o.pos);
+	o.tex1 = float2(0, 0);
+	o.tex2 = float2(i.age / TimeToLive, 0.5);
 	ostream.Append(o);
 
 	o.pos = float4(i.pos.x + dy, i.pos.y - dx, i.pos.z, 1.0f);
 	o.pos = mul(projMatrix, o.pos);
+	o.tex1 = float2(1, 1);
+	o.tex2 = float2(i.age / TimeToLive, 0.5);
 	ostream.Append(o);
 
 	o.pos = float4(i.pos.x + dx, i.pos.y + dy, i.pos.z, 1.0f);
 	o.pos = mul(projMatrix, o.pos);
+	o.tex1 = float2(1, 0);
+	o.tex2 = float2(i.age / TimeToLive, 0.5);
 	ostream.Append(o);
 
 	ostream.RestartStrip();

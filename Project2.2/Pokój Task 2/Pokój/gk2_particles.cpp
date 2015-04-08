@@ -30,10 +30,10 @@ bool ParticleComparer::operator()(const ParticleVertex& p1, const ParticleVertex
 
 const XMFLOAT3 ParticleSystem::EMITTER_DIR = XMFLOAT3(0.0f, 1.0f, 0.0f);
 const float ParticleSystem::TIME_TO_LIVE = 4.0f;
-const float ParticleSystem::EMISSION_RATE = 10.0f;
+const float ParticleSystem::EMISSION_RATE = 1.0f; // 10.0f
 const float ParticleSystem::MAX_ANGLE = XM_PIDIV2 / 9.0f;
 const float ParticleSystem::MIN_VELOCITY = 0.2f;
-const float ParticleSystem::MAX_VELOCITY = 0.33f;
+const float ParticleSystem::MAX_VELOCITY = 0.83f; // 0.33f
 const float ParticleSystem::PARTICLE_SIZE = 0.08f;
 const float ParticleSystem::PARTICLE_SCALE = 1.0f;
 const float ParticleSystem::MIN_ANGLE_VEL = -XM_PI;
