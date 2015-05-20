@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\effects">
+      <UniqueIdentifier>{3295401e-e450-4dd8-b230-27c3364499f0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\framework">
+      <UniqueIdentifier>{ca28ad60-3e95-4830-b26b-b0a0492db8e5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\textures">
+      <UniqueIdentifier>{8aec4827-8e47-4c89-b404-c1d0ed2b6540}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\shaders">
+      <UniqueIdentifier>{9f295785-7090-400e-9556-34ac85aca341}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\meshes">
+      <UniqueIdentifier>{45a92be7-5b28-4552-bec1-ac083a391cd3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\effects">
+      <UniqueIdentifier>{22666493-c71a-4433-8e26-87bed6804c74}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\framework">
+      <UniqueIdentifier>{734cfe81-2866-41be-95be-7bdbee712f05}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="gk2_room.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="gk2_applicationBase.cpp">
+      <Filter>Source Files\framework</Filter>
+    </ClCompile>
+    <ClCompile Include="gk2_camera.cpp">
+      <Filter>Source Files\framework</Filter>
+    </ClCompile>
+    <ClCompile Include="gk2_constantBuffer.cpp">
+      <Filter>Source Files\framework</Filter>
+    </ClCompile>
+    <ClCompile Include="gk2_deviceHelper.cpp">
+      <Filter>Source Files\framework</Filter>
+    </ClCompile>
+    <ClCompile Include="gk2_exceptions.cpp">
+      <Filter>Source Files\framework</Filter>
+    </ClCompile>
+    <ClCompile Include="gk2_input.cpp">
+      <Filter>Source Files\framework</Filter>
+    </ClCompile>
+    <ClCompile Include="gk2_mesh.cpp">
+      <Filter>Source Files\framework</Filter>
+    </ClCompile>
+    <ClCompile Include="gk2_meshLoader.cpp">
+      <Filter>Source Files\framework</Filter>
+    </ClCompile>
+    <ClCompile Include="gk2_utils.cpp">
+      <Filter>Source Files\framework</Filter>
+    </ClCompile>
+    <ClCompile Include="gk2_vertices.cpp">
+      <Filter>Source Files\framework</Filter>
+    </ClCompile>
+    <ClCompile Include="gk2_window.cpp">
+      <Filter>Source Files\framework</Filter>
+    </ClCompile>
+    <ClCompile Include="gk2_effectBase.cpp">
+      <Filter>Source Files\effects</Filter>
+    </ClCompile>
+    <ClCompile Include="gk2_phongEffect.cpp">
+      <Filter>Source Files\effects</Filter>
+    </ClCompile>
+    <ClCompile Include="gk2_particles.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="gk2_lightShadowEffect.cpp">
+      <Filter>Source Files\effects</Filter>
+    </ClCompile>
+    <ClCompile Include="gk2_textureEffect.cpp">
+      <Filter>Source Files\effects</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="gk2_room.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gk2_applicationBase.h">
+      <Filter>Header Files\framework</Filter>
+    </ClInclude>
+    <ClInclude Include="gk2_camera.h">
+      <Filter>Header Files\framework</Filter>
+    </ClInclude>
+    <ClInclude Include="gk2_constantBuffer.h">
+      <Filter>Header Files\framework</Filter>
+    </ClInclude>
+    <ClInclude Include="gk2_deviceHelper.h">
+      <Filter>Header Files\framework</Filter>
+    </ClInclude>
+    <ClInclude Include="gk2_exceptions.h">
+      <Filter>Header Files\framework</Filter>
+    </ClInclude>
+    <ClInclude Include="gk2_input.h">
+      <Filter>Header Files\framework</Filter>
+    </ClInclude>
+    <ClInclude Include="gk2_mesh.h">
+      <Filter>Header Files\framework</Filter>
+    </ClInclude>
+    <ClInclude Include="gk2_meshLoader.h">
+      <Filter>Header Files\framework</Filter>
+    </ClInclude>
+    <ClInclude Include="gk2_utils.h">
+      <Filter>Header Files\framework</Filter>
+    </ClInclude>
+    <ClInclude Include="gk2_vertices.h">
+      <Filter>Header Files\framework</Filter>
+    </ClInclude>
+    <ClInclude Include="gk2_window.h">
+      <Filter>Header Files\framework</Filter>
+    </ClInclude>
+    <ClInclude Include="gk2_phongEffect.h">
+      <Filter>Header Files\effects</Filter>
+    </ClInclude>
+    <ClInclude Include="gk2_particles.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gk2_effectBase.h">
+      <Filter>Header Files\effects</Filter>
+    </ClInclude>
+    <ClInclude Include="gk2_lightShadowEffect.h">
+      <Filter>Header Files\effects</Filter>
+    </ClInclude>
+    <ClInclude Include="gk2_textureEffect.h">
+      <Filter>Header Files\effects</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\shaders\PhongShader.hlsl">
+      <Filter>Resource Files\shaders</Filter>
+    </None>
+    <None Include="resources\shaders\Particles.hlsl">
+      <Filter>Resource Files\shaders</Filter>
+    </None>
+    <None Include="resources\shaders\LightShadow.hlsl">
+      <Filter>Resource Files\shaders</Filter>
+    </None>
+    <None Include="Robot.pdf">
+      <Filter>Source Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="resources\shaders\TextureShader.hlsl">
+      <Filter>Resource Files\shaders</Filter>
+    </FxCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="resources\textures\lava.jpg">
+      <Filter>Resource Files\textures</Filter>
+    </Image>
+    <Image Include="resources\textures\metal.jpg">
+      <Filter>Resource Files\textures</Filter>
+    </Image>
+    <Image Include="resources\textures\spark.png">
+      <Filter>Resource Files\textures</Filter>
+    </Image>
+    <Image Include="resources\textures\sun.jpg">
+      <Filter>Resource Files\textures</Filter>
+    </Image>
+    <Image Include="resources\textures\light_cookie.png">
+      <Filter>Resource Files\textures</Filter>
+    </Image>
+    <Image Include="resources\textures\stones.jpg">
+      <Filter>Resource Files\textures</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="resources\meshes\mesh1.txt">
+      <Filter>Resource Files\meshes</Filter>
+    </Text>
+    <Text Include="resources\meshes\mesh2.txt">
+      <Filter>Resource Files\meshes</Filter>
+    </Text>
+    <Text Include="resources\meshes\mesh3.txt">
+      <Filter>Resource Files\meshes</Filter>
+    </Text>
+    <Text Include="resources\meshes\mesh4.txt">
+      <Filter>Resource Files\meshes</Filter>
+    </Text>
+    <Text Include="resources\meshes\mesh5.txt">
+      <Filter>Resource Files\meshes</Filter>
+    </Text>
+    <Text Include="resources\meshes\mesh6.txt">
+      <Filter>Resource Files\meshes</Filter>
+    </Text>
+  </ItemGroup>
+</Project>

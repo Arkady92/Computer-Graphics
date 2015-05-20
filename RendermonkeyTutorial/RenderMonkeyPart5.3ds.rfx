@@ -909,7 +909,7 @@
   <RmRegistryBranch NAME="RM_REGISTRY" API="" XML_VERSION="RenderMonkey 1.71">
    <RmRegistryBranch NAME="RM_LOCAL" API="" XML_VERSION="RenderMonkey 1.71">
     <RmRegistryBranch NAME="RM_PLUGIN" API="" XML_VERSION="RenderMonkey 1.71"><RmTextDataBlock TYPE="TEXT"><![CDATA[
-<DockingPaneLayouts><Application_Layout><Pane-1><Type>0</Type><DockingCX>250</DockingCX><DockingCY>250</DockingCY><Title>Artist Editor</Title><ID>1001</ID><IconID>-1</IconID><Options>0</Options><DockingHolder>17</DockingHolder><FloatingHolder>0</FloatingHolder><LastHolder>17</LastHolder></Pane-1><Pane-2><Type>0</Type><DockingCX>435</DockingCX><DockingCY>111</DockingCY><Title>exposure</Title><ID>1100</ID><IconID>-1</IconID><Options>0</Options><DockingHolder>11</DockingHolder><FloatingHolder>22</FloatingHolder><LastHolder>22</LastHolder></Pane-2><Pane-3><Type>2</Type><DockingCX>0</DockingCX><DockingCY>0</DockingCY><Horiz>1</Horiz><Pane-1>4</Pane-1><Pane-2>5</Pane-2><Pane-3>6</Pane-3><Pane-4>7</Pane-4><Pane-5>8</Pane-5><Pane-6>9</Pane-6><Pane-7>10</Pane-7><Pane-8>11</Pane-8><Pane-9>12</Pane-9><Panes>9</Panes></Pane-3><Pane-4><Type>1</Type><DockingCX>435</DockingCX><DockingCY>110</DockingCY><Selected>0</Selected><Panes>0</Panes></Pane-4><Pane-5><Type>1</Type><DockingCX>435</DockingCX><DockingCY>110</DockingCY><Selected>0</Selected><Panes>0</Panes></Pane-5><Pane-6><Type>1</Type><DockingCX>435</DockingCX><DockingCY>110</DockingCY><Selected>0</Selected><Panes>0</Panes></Pane-6><Pane-7><Type>1</Type><DockingCX>435</DockingCX><DockingCY>110</DockingCY><Selected>0</Selected><Panes>0</Panes></Pane-7><Pane-8><Type>1</Type><DockingCX>435</DockingCX><DockingCY>110</DockingCY><Selected>0</Selected><Panes>0</Panes></Pane-8><Pane-9><Type>1</Type><DockingCX>435</DockingCX><DockingCY>110</DockingCY><Selected>0</Selected><Panes>0</Panes></Pane-9><Pane-10><Type>1</Type><DockingCX>435</DockingCX><DockingCY>110</DockingCY><Selected>0</Selected><Panes>0</Panes></Pane-10><Pane-11><Type>1</Type><DockingCX>435</DockingCX><DockingCY>111</DockingCY><Selected>0</Selected><Panes>0</Panes></Pane-11><Pane-12><Type>2</Type><DockingCX>0</DockingCX><DockingCY>0</DockingCY><Horiz>0</Horiz><Pane-1>13</Pane-1><Pane-2>18</Pane-2><Panes>2</Panes></Pane-12><Pane-13><Type>2</Type><DockingCX>0</DockingCX><DockingCY>554</DockingCY><Horiz>1</Horiz><Pane-1>14</Pane-1><Pane-2>16</Pane-2><Pane-3>17</Pane-3><Panes>3</Panes></Pane-13><Pane-14><Type>1</Type><DockingCX>206</DockingCX><DockingCY>250</DockingCY><Selected>15</Selected><Panes>1</Panes><Pane-1>15</Pane-1></Pane-14><Pane-15><Type>0</Type><DockingCX>250</DockingCX><DockingCY>250</DockingCY><Title>Workspace</Title><ID>1000</ID><IconID>-1</IconID><Options>0</Options><DockingHolder>14</DockingHolder><FloatingHolder>0</FloatingHolder><LastHolder>14</LastHolder></Pane-15><Pane-16><Type>4</Type><DockingCX>0</DockingCX><DockingCY>0</DockingCY></Pane-16><Pane-17><Type>1</Type><DockingCX>256</DockingCX><DockingCY>250</DockingCY><Selected>0</Selected><Panes>0</Panes></Pane-17><Pane-18><Type>1</Type><DockingCX>250</DockingCX><DockingCY>103</DockingCY><Selected>19</Selected><Panes>1</Panes><Pane-1>19</Pane-1></Pane-18><Pane-19><Type>0</Type><DockingCX>250</DockingCX><DockingCY>250</DockingCY><Title>Output</Title><ID>1002</ID><IconID>-1</IconID><Options>0</Options><DockingHolder>18</DockingHolder><FloatingHolder>25</FloatingHolder><LastHolder>18</LastHolder></Pane-19><Pane-20><Type>3</Type><DockingCX>0</DockingCX><DockingCY>0</DockingCY><TopContaner>21</TopContaner><WindowRectTopPos>31</WindowRectTopPos><WindowRectBottomPos>142</WindowRectBottomPos><WindowRectLeftPos>691</WindowRectLeftPos><WindowRectRightPos>1126</WindowRectRightPos></Pane-20><Pane-21><Type>2</Type><DockingCX>435</DockingCX><DockingCY>111</DockingCY><Horiz>1</Horiz><Pane-1>22</Pane-1><Panes>1</Panes></Pane-21><Pane-22><Type>1</Type><DockingCX>435</DockingCX><DockingCY>111</DockingCY><Selected>0</Selected><Panes>0</Panes></Pane-22><Pane-23><Type>3</Type><DockingCX>0</DockingCX><DockingCY>0</DockingCY><TopContaner>24</TopContaner><WindowRectTopPos>646</WindowRectTopPos><WindowRectBottomPos>749</WindowRectBottomPos><WindowRectLeftPos>0</WindowRectLeftPos><WindowRectRightPos>1366</WindowRectRightPos></Pane-23><Pane-24><Type>2</Type><DockingCX>250</DockingCX><DockingCY>250</DockingCY><Horiz>1</Horiz><Pane-1>25</Pane-1><Panes>1</Panes></Pane-24><Pane-25><Type>1</Type><DockingCX>250</DockingCX><DockingCY>250</DockingCY><Selected>0</Selected><Panes>0</Panes></Pane-25><Pane-26><Type>0</Type><DockingCX>435</DockingCX><DockingCY>110</DockingCY><Title>l</Title><ID>1101</ID><IconID>-1</IconID><Options>0</Options><DockingHolder>10</DockingHolder><FloatingHolder>29</FloatingHolder><LastHolder>29</LastHolder></Pane-26><Pane-27><Type>3</Type><DockingCX>0</DockingCX><DockingCY>0</DockingCY><TopContaner>28</TopContaner><WindowRectTopPos>30</WindowRectTopPos><WindowRectBottomPos>140</WindowRectBottomPos><WindowRectLeftPos>8</WindowRectLeftPos><WindowRectRightPos>443</WindowRectRightPos></Pane-27><Pane-28><Type>2</Type><DockingCX>435</DockingCX><DockingCY>110</DockingCY><Horiz>1</Horiz><Pane-1>29</Pane-1><Panes>1</Panes></Pane-28><Pane-29><Type>1</Type><DockingCX>435</DockingCX><DockingCY>110</DockingCY><Selected>0</Selected><Panes>0</Panes></Pane-29><Pane-30><Type>0</Type><DockingCX>435</DockingCX><DockingCY>110</DockingCY><Title>h0</Title><ID>1102</ID><IconID>-1</IconID><Options>0</Options><DockingHolder>9</DockingHolder><FloatingHolder>33</FloatingHolder><LastHolder>33</LastHolder></Pane-30><Pane-31><Type>3</Type><DockingCX>0</DockingCX><DockingCY>0</DockingCY><TopContaner>32</TopContaner><WindowRectTopPos>30</WindowRectTopPos><WindowRectBottomPos>140</WindowRectBottomPos><WindowRectLeftPos>8</WindowRectLeftPos><WindowRectRightPos>443</WindowRectRightPos></Pane-31><Pane-32><Type>2</Type><DockingCX>435</DockingCX><DockingCY>110</DockingCY><Horiz>1</Horiz><Pane-1>33</Pane-1><Panes>1</Panes></Pane-32><Pane-33><Type>1</Type><DockingCX>435</DockingCX><DockingCY>110</DockingCY><Selected>0</Selected><Panes>0</Panes></Pane-33><Pane-34><Type>0</Type><DockingCX>435</DockingCX><DockingCY>110</DockingCY><Title>r</Title><ID>1103</ID><IconID>-1</IconID><Options>0</Options><DockingHolder>8</DockingHolder><FloatingHolder>37</FloatingHolder><LastHolder>37</LastHolder></Pane-34><Pane-35><Type>3</Type><DockingCX>0</DockingCX><DockingCY>0</DockingCY><TopContaner>36</TopContaner><WindowRectTopPos>30</WindowRectTopPos><WindowRectBottomPos>140</WindowRectBottomPos><WindowRectLeftPos>8</WindowRectLeftPos><WindowRectRightPos>443</WindowRectRightPos></Pane-35><Pane-36><Type>2</Type><DockingCX>435</DockingCX><DockingCY>110</DockingCY><Horiz>1</Horiz><Pane-1>37</Pane-1><Panes>1</Panes></Pane-36><Pane-37><Type>1</Type><DockingCX>435</DockingCX><DockingCY>110</DockingCY><Selected>0</Selected><Panes>0</Panes></Pane-37><Pane-38><Type>0</Type><DockingCX>435</DockingCX><DockingCY>110</DockingCY><Title>rsmall</Title><ID>1104</ID><IconID>-1</IconID><Options>0</Options><DockingHolder>7</DockingHolder><FloatingHolder>41</FloatingHolder><LastHolder>41</LastHolder></Pane-38><Pane-39><Type>3</Type><DockingCX>0</DockingCX><DockingCY>0</DockingCY><TopContaner>40</TopContaner><WindowRectTopPos>30</WindowRectTopPos><WindowRectBottomPos>140</WindowRectBottomPos><WindowRectLeftPos>8</WindowRectLeftPos><WindowRectRightPos>443</WindowRectRightPos></Pane-39><Pane-40><Type>2</Type><DockingCX>435</DockingCX><DockingCY>110</DockingCY><Horiz>1</Horiz><Pane-1>41</Pane-1><Panes>1</Panes></Pane-40><Pane-41><Type>1</Type><DockingCX>435</DockingCX><DockingCY>110</DockingCY><Selected>0</Selected><Panes>0</Panes></Pane-41><Pane-42><Type>0</Type><DockingCX>435</DockingCX><DockingCY>110</DockingCY><Title>thalf</Title><ID>1105</ID><IconID>-1</IconID><Options>0</Options><DockingHolder>6</DockingHolder><FloatingHolder>45</FloatingHolder><LastHolder>45</LastHolder></Pane-42><Pane-43><Type>3</Type><DockingCX>0</DockingCX><DockingCY>0</DockingCY><TopContaner>44</TopContaner><WindowRectTopPos>30</WindowRectTopPos><WindowRectBottomPos>140</WindowRectBottomPos><WindowRectLeftPos>8</WindowRectLeftPos><WindowRectRightPos>443</WindowRectRightPos></Pane-43><Pane-44><Type>2</Type><DockingCX>435</DockingCX><DockingCY>110</DockingCY><Horiz>1</Horiz><Pane-1>45</Pane-1><Panes>1</Panes></Pane-44><Pane-45><Type>1</Type><DockingCX>435</DockingCX><DockingCY>110</DockingCY><Selected>0</Selected><Panes>0</Panes></Pane-45><Pane-46><Type>0</Type><DockingCX>435</DockingCX><DockingCY>110</DockingCY><Title>xmax</Title><ID>1106</ID><IconID>-1</IconID><Options>0</Options><DockingHolder>5</DockingHolder><FloatingHolder>49</FloatingHolder><LastHolder>49</LastHolder></Pane-46><Pane-47><Type>3</Type><DockingCX>0</DockingCX><DockingCY>0</DockingCY><TopContaner>48</TopContaner><WindowRectTopPos>30</WindowRectTopPos><WindowRectBottomPos>140</WindowRectBottomPos><WindowRectLeftPos>8</WindowRectLeftPos><WindowRectRightPos>443</WindowRectRightPos></Pane-47><Pane-48><Type>2</Type><DockingCX>435</DockingCX><DockingCY>110</DockingCY><Horiz>1</Horiz><Pane-1>49</Pane-1><Panes>1</Panes></Pane-48><Pane-49><Type>1</Type><DockingCX>435</DockingCX><DockingCY>110</DockingCY><Selected>0</Selected><Panes>0</Panes></Pane-49><Pane-50><Type>0</Type><DockingCX>435</DockingCX><DockingCY>110</DockingCY><Title>vmax</Title><ID>1107</ID><IconID>-1</IconID><Options>0</Options><DockingHolder>4</DockingHolder><FloatingHolder>53</FloatingHolder><LastHolder>53</LastHolder></Pane-50><Pane-51><Type>3</Type><DockingCX>0</DockingCX><DockingCY>0</DockingCY><TopContaner>52</TopContaner><WindowRectTopPos>30</WindowRectTopPos><WindowRectBottomPos>140</WindowRectBottomPos><WindowRectLeftPos>8</WindowRectLeftPos><WindowRectRightPos>443</WindowRectRightPos></Pane-51><Pane-52><Type>2</Type><DockingCX>435</DockingCX><DockingCY>110</DockingCY><Horiz>1</Horiz><Pane-1>53</Pane-1><Panes>1</Panes></Pane-52><Pane-53><Type>1</Type><DockingCX>435</DockingCX><DockingCY>110</DockingCY><Selected>0</Selected><Panes>0</Panes></Pane-53><Summary><TopContainer>3</TopContainer><Client>16</Client><Panes>53</Panes></Summary></Application_Layout></DockingPaneLayouts>
+<DockingPaneLayouts><Application_Layout><Pane-1><Type>0</Type><DockingCX>435</DockingCX><DockingCY>111</DockingCY><Title>exposure</Title><ID>1100</ID><IconID>-1</IconID><Options>0</Options><DockingHolder>12</DockingHolder><FloatingHolder>24</FloatingHolder><LastHolder>24</LastHolder></Pane-1><Pane-2><Type>2</Type><DockingCX>0</DockingCX><DockingCY>0</DockingCY><Horiz>1</Horiz><Pane-1>3</Pane-1><Pane-2>4</Pane-2><Pane-3>5</Pane-3><Pane-4>6</Pane-4><Pane-5>7</Pane-5><Pane-6>8</Pane-6><Pane-7>9</Pane-7><Pane-8>10</Pane-8><Pane-9>11</Pane-9><Pane-10>12</Pane-10><Pane-11>13</Pane-11><Panes>11</Panes></Pane-2><Pane-3><Type>1</Type><DockingCX>435</DockingCX><DockingCY>110</DockingCY><Selected>0</Selected><Panes>0</Panes></Pane-3><Pane-4><Type>1</Type><DockingCX>435</DockingCX><DockingCY>110</DockingCY><Selected>0</Selected><Panes>0</Panes></Pane-4><Pane-5><Type>1</Type><DockingCX>435</DockingCX><DockingCY>110</DockingCY><Selected>0</Selected><Panes>0</Panes></Pane-5><Pane-6><Type>1</Type><DockingCX>435</DockingCX><DockingCY>110</DockingCY><Selected>0</Selected><Panes>0</Panes></Pane-6><Pane-7><Type>1</Type><DockingCX>435</DockingCX><DockingCY>110</DockingCY><Selected>0</Selected><Panes>0</Panes></Pane-7><Pane-8><Type>1</Type><DockingCX>435</DockingCX><DockingCY>110</DockingCY><Selected>0</Selected><Panes>0</Panes></Pane-8><Pane-9><Type>1</Type><DockingCX>435</DockingCX><DockingCY>110</DockingCY><Selected>0</Selected><Panes>0</Panes></Pane-9><Pane-10><Type>1</Type><DockingCX>435</DockingCX><DockingCY>110</DockingCY><Selected>0</Selected><Panes>0</Panes></Pane-10><Pane-11><Type>1</Type><DockingCX>435</DockingCX><DockingCY>110</DockingCY><Selected>0</Selected><Panes>0</Panes></Pane-11><Pane-12><Type>1</Type><DockingCX>435</DockingCX><DockingCY>111</DockingCY><Selected>0</Selected><Panes>0</Panes></Pane-12><Pane-13><Type>2</Type><DockingCX>0</DockingCX><DockingCY>0</DockingCY><Horiz>0</Horiz><Pane-1>14</Pane-1><Pane-2>19</Pane-2><Panes>2</Panes></Pane-13><Pane-14><Type>2</Type><DockingCX>0</DockingCX><DockingCY>468</DockingCY><Horiz>1</Horiz><Pane-1>15</Pane-1><Pane-2>17</Pane-2><Pane-3>18</Pane-3><Panes>3</Panes></Pane-14><Pane-15><Type>1</Type><DockingCX>206</DockingCX><DockingCY>250</DockingCY><Selected>16</Selected><Panes>1</Panes><Pane-1>16</Pane-1></Pane-15><Pane-16><Type>0</Type><DockingCX>250</DockingCX><DockingCY>250</DockingCY><Title>Workspace</Title><ID>1000</ID><IconID>-1</IconID><Options>0</Options><DockingHolder>15</DockingHolder><FloatingHolder>0</FloatingHolder><LastHolder>15</LastHolder></Pane-16><Pane-17><Type>4</Type><DockingCX>0</DockingCX><DockingCY>0</DockingCY></Pane-17><Pane-18><Type>1</Type><DockingCX>172</DockingCX><DockingCY>250</DockingCY><Selected>0</Selected><Panes>0</Panes></Pane-18><Pane-19><Type>1</Type><DockingCX>250</DockingCX><DockingCY>173</DockingCY><Selected>20</Selected><Panes>1</Panes><Pane-1>20</Pane-1></Pane-19><Pane-20><Type>0</Type><DockingCX>250</DockingCX><DockingCY>250</DockingCY><Title>Output</Title><ID>1002</ID><IconID>-1</IconID><Options>0</Options><DockingHolder>19</DockingHolder><FloatingHolder>27</FloatingHolder><LastHolder>19</LastHolder></Pane-20><Pane-21><Type>0</Type><DockingCX>250</DockingCX><DockingCY>250</DockingCY><Title>Artist Editor</Title><ID>1001</ID><IconID>-1</IconID><Options>0</Options><DockingHolder>18</DockingHolder><FloatingHolder>0</FloatingHolder><LastHolder>18</LastHolder></Pane-21><Pane-22><Type>3</Type><DockingCX>0</DockingCX><DockingCY>0</DockingCY><TopContaner>23</TopContaner><WindowRectTopPos>31</WindowRectTopPos><WindowRectBottomPos>142</WindowRectBottomPos><WindowRectLeftPos>691</WindowRectLeftPos><WindowRectRightPos>1126</WindowRectRightPos></Pane-22><Pane-23><Type>2</Type><DockingCX>435</DockingCX><DockingCY>111</DockingCY><Horiz>1</Horiz><Pane-1>24</Pane-1><Panes>1</Panes></Pane-23><Pane-24><Type>1</Type><DockingCX>435</DockingCX><DockingCY>111</DockingCY><Selected>0</Selected><Panes>0</Panes></Pane-24><Pane-25><Type>3</Type><DockingCX>0</DockingCX><DockingCY>0</DockingCY><TopContaner>26</TopContaner><WindowRectTopPos>646</WindowRectTopPos><WindowRectBottomPos>749</WindowRectBottomPos><WindowRectLeftPos>0</WindowRectLeftPos><WindowRectRightPos>1366</WindowRectRightPos></Pane-25><Pane-26><Type>2</Type><DockingCX>250</DockingCX><DockingCY>250</DockingCY><Horiz>1</Horiz><Pane-1>27</Pane-1><Panes>1</Panes></Pane-26><Pane-27><Type>1</Type><DockingCX>250</DockingCX><DockingCY>250</DockingCY><Selected>0</Selected><Panes>0</Panes></Pane-27><Pane-28><Type>0</Type><DockingCX>435</DockingCX><DockingCY>110</DockingCY><Title>l</Title><ID>1101</ID><IconID>-1</IconID><Options>0</Options><DockingHolder>11</DockingHolder><FloatingHolder>31</FloatingHolder><LastHolder>31</LastHolder></Pane-28><Pane-29><Type>3</Type><DockingCX>0</DockingCX><DockingCY>0</DockingCY><TopContaner>30</TopContaner><WindowRectTopPos>30</WindowRectTopPos><WindowRectBottomPos>140</WindowRectBottomPos><WindowRectLeftPos>8</WindowRectLeftPos><WindowRectRightPos>443</WindowRectRightPos></Pane-29><Pane-30><Type>2</Type><DockingCX>435</DockingCX><DockingCY>110</DockingCY><Horiz>1</Horiz><Pane-1>31</Pane-1><Panes>1</Panes></Pane-30><Pane-31><Type>1</Type><DockingCX>435</DockingCX><DockingCY>110</DockingCY><Selected>0</Selected><Panes>0</Panes></Pane-31><Pane-32><Type>0</Type><DockingCX>435</DockingCX><DockingCY>110</DockingCY><Title>h0</Title><ID>1102</ID><IconID>-1</IconID><Options>0</Options><DockingHolder>10</DockingHolder><FloatingHolder>35</FloatingHolder><LastHolder>35</LastHolder></Pane-32><Pane-33><Type>3</Type><DockingCX>0</DockingCX><DockingCY>0</DockingCY><TopContaner>34</TopContaner><WindowRectTopPos>30</WindowRectTopPos><WindowRectBottomPos>140</WindowRectBottomPos><WindowRectLeftPos>8</WindowRectLeftPos><WindowRectRightPos>443</WindowRectRightPos></Pane-33><Pane-34><Type>2</Type><DockingCX>435</DockingCX><DockingCY>110</DockingCY><Horiz>1</Horiz><Pane-1>35</Pane-1><Panes>1</Panes></Pane-34><Pane-35><Type>1</Type><DockingCX>435</DockingCX><DockingCY>110</DockingCY><Selected>0</Selected><Panes>0</Panes></Pane-35><Pane-36><Type>0</Type><DockingCX>435</DockingCX><DockingCY>110</DockingCY><Title>r</Title><ID>1103</ID><IconID>-1</IconID><Options>0</Options><DockingHolder>9</DockingHolder><FloatingHolder>39</FloatingHolder><LastHolder>39</LastHolder></Pane-36><Pane-37><Type>3</Type><DockingCX>0</DockingCX><DockingCY>0</DockingCY><TopContaner>38</TopContaner><WindowRectTopPos>30</WindowRectTopPos><WindowRectBottomPos>140</WindowRectBottomPos><WindowRectLeftPos>8</WindowRectLeftPos><WindowRectRightPos>443</WindowRectRightPos></Pane-37><Pane-38><Type>2</Type><DockingCX>435</DockingCX><DockingCY>110</DockingCY><Horiz>1</Horiz><Pane-1>39</Pane-1><Panes>1</Panes></Pane-38><Pane-39><Type>1</Type><DockingCX>435</DockingCX><DockingCY>110</DockingCY><Selected>0</Selected><Panes>0</Panes></Pane-39><Pane-40><Type>0</Type><DockingCX>435</DockingCX><DockingCY>110</DockingCY><Title>rsmall</Title><ID>1104</ID><IconID>-1</IconID><Options>0</Options><DockingHolder>8</DockingHolder><FloatingHolder>43</FloatingHolder><LastHolder>43</LastHolder></Pane-40><Pane-41><Type>3</Type><DockingCX>0</DockingCX><DockingCY>0</DockingCY><TopContaner>42</TopContaner><WindowRectTopPos>30</WindowRectTopPos><WindowRectBottomPos>140</WindowRectBottomPos><WindowRectLeftPos>8</WindowRectLeftPos><WindowRectRightPos>443</WindowRectRightPos></Pane-41><Pane-42><Type>2</Type><DockingCX>435</DockingCX><DockingCY>110</DockingCY><Horiz>1</Horiz><Pane-1>43</Pane-1><Panes>1</Panes></Pane-42><Pane-43><Type>1</Type><DockingCX>435</DockingCX><DockingCY>110</DockingCY><Selected>0</Selected><Panes>0</Panes></Pane-43><Pane-44><Type>0</Type><DockingCX>435</DockingCX><DockingCY>110</DockingCY><Title>thalf</Title><ID>1105</ID><IconID>-1</IconID><Options>0</Options><DockingHolder>7</DockingHolder><FloatingHolder>47</FloatingHolder><LastHolder>47</LastHolder></Pane-44><Pane-45><Type>3</Type><DockingCX>0</DockingCX><DockingCY>0</DockingCY><TopContaner>46</TopContaner><WindowRectTopPos>30</WindowRectTopPos><WindowRectBottomPos>140</WindowRectBottomPos><WindowRectLeftPos>8</WindowRectLeftPos><WindowRectRightPos>443</WindowRectRightPos></Pane-45><Pane-46><Type>2</Type><DockingCX>435</DockingCX><DockingCY>110</DockingCY><Horiz>1</Horiz><Pane-1>47</Pane-1><Panes>1</Panes></Pane-46><Pane-47><Type>1</Type><DockingCX>435</DockingCX><DockingCY>110</DockingCY><Selected>0</Selected><Panes>0</Panes></Pane-47><Pane-48><Type>0</Type><DockingCX>435</DockingCX><DockingCY>110</DockingCY><Title>xmax</Title><ID>1106</ID><IconID>-1</IconID><Options>0</Options><DockingHolder>6</DockingHolder><FloatingHolder>51</FloatingHolder><LastHolder>51</LastHolder></Pane-48><Pane-49><Type>3</Type><DockingCX>0</DockingCX><DockingCY>0</DockingCY><TopContaner>50</TopContaner><WindowRectTopPos>30</WindowRectTopPos><WindowRectBottomPos>140</WindowRectBottomPos><WindowRectLeftPos>8</WindowRectLeftPos><WindowRectRightPos>443</WindowRectRightPos></Pane-49><Pane-50><Type>2</Type><DockingCX>435</DockingCX><DockingCY>110</DockingCY><Horiz>1</Horiz><Pane-1>51</Pane-1><Panes>1</Panes></Pane-50><Pane-51><Type>1</Type><DockingCX>435</DockingCX><DockingCY>110</DockingCY><Selected>0</Selected><Panes>0</Panes></Pane-51><Pane-52><Type>0</Type><DockingCX>435</DockingCX><DockingCY>110</DockingCY><Title>vmax</Title><ID>1107</ID><IconID>-1</IconID><Options>0</Options><DockingHolder>5</DockingHolder><FloatingHolder>55</FloatingHolder><LastHolder>55</LastHolder></Pane-52><Pane-53><Type>3</Type><DockingCX>0</DockingCX><DockingCY>0</DockingCY><TopContaner>54</TopContaner><WindowRectTopPos>30</WindowRectTopPos><WindowRectBottomPos>140</WindowRectBottomPos><WindowRectLeftPos>8</WindowRectLeftPos><WindowRectRightPos>443</WindowRectRightPos></Pane-53><Pane-54><Type>2</Type><DockingCX>435</DockingCX><DockingCY>110</DockingCY><Horiz>1</Horiz><Pane-1>55</Pane-1><Panes>1</Panes></Pane-54><Pane-55><Type>1</Type><DockingCX>435</DockingCX><DockingCY>110</DockingCY><Selected>0</Selected><Panes>0</Panes></Pane-55><Pane-56><Type>0</Type><DockingCX>435</DockingCX><DockingCY>110</DockingCY><Title>blurscale</Title><ID>1108</ID><IconID>-1</IconID><Options>0</Options><DockingHolder>4</DockingHolder><FloatingHolder>59</FloatingHolder><LastHolder>59</LastHolder></Pane-56><Pane-57><Type>3</Type><DockingCX>0</DockingCX><DockingCY>0</DockingCY><TopContaner>58</TopContaner><WindowRectTopPos>30</WindowRectTopPos><WindowRectBottomPos>140</WindowRectBottomPos><WindowRectLeftPos>8</WindowRectLeftPos><WindowRectRightPos>443</WindowRectRightPos></Pane-57><Pane-58><Type>2</Type><DockingCX>435</DockingCX><DockingCY>110</DockingCY><Horiz>1</Horiz><Pane-1>59</Pane-1><Panes>1</Panes></Pane-58><Pane-59><Type>1</Type><DockingCX>435</DockingCX><DockingCY>110</DockingCY><Selected>0</Selected><Panes>0</Panes></Pane-59><Pane-60><Type>0</Type><DockingCX>435</DockingCX><DockingCY>110</DockingCY><Title>luminance_cutoff</Title><ID>1109</ID><IconID>-1</IconID><Options>0</Options><DockingHolder>3</DockingHolder><FloatingHolder>63</FloatingHolder><LastHolder>63</LastHolder></Pane-60><Pane-61><Type>3</Type><DockingCX>0</DockingCX><DockingCY>0</DockingCY><TopContaner>62</TopContaner><WindowRectTopPos>30</WindowRectTopPos><WindowRectBottomPos>140</WindowRectBottomPos><WindowRectLeftPos>8</WindowRectLeftPos><WindowRectRightPos>443</WindowRectRightPos></Pane-61><Pane-62><Type>2</Type><DockingCX>435</DockingCX><DockingCY>110</DockingCY><Horiz>1</Horiz><Pane-1>63</Pane-1><Panes>1</Panes></Pane-62><Pane-63><Type>1</Type><DockingCX>435</DockingCX><DockingCY>110</DockingCY><Selected>0</Selected><Panes>0</Panes></Pane-63><Summary><TopContainer>2</TopContainer><Client>17</Client><Panes>63</Panes></Summary></Application_Layout></DockingPaneLayouts>
 ]]></RmTextDataBlock>
      <RmRegistryBranch NAME="RmPreviewDx9Window" API="" XML_VERSION="RenderMonkey 1.71">
       <RmRegistryBranch NAME="EffectPlacementRepository" API="" XML_VERSION="RenderMonkey 1.71">
@@ -935,9 +935,73 @@
      </RmRegistryBranch>
      <RmRegistryBranch NAME="RmRenderableTextureEditor" API="" XML_VERSION="RenderMonkey 1.71">
       <RmRegistryBranch NAME="EditNodeRepository" API="" XML_VERSION="RenderMonkey 1.71"/>
+      <RmRegistryBranch NAME="NodeRepository" API="" XML_VERSION="RenderMonkey 1.71">
+       <RmRegistryBranch NAME="Effect Workspace.Textured Phong.screen" API="" XML_VERSION="RenderMonkey 1.71">
+        <RmIntegerVariable NAME="X" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="222" MIN="-10" MAX="10" CLAMP="FALSE"/>
+        <RmIntegerVariable NAME="Y" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="122" MIN="-10" MAX="10" CLAMP="FALSE"/>
+        <RmIntegerVariable NAME="Width" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="210" MIN="-10" MAX="10" CLAMP="FALSE"/>
+        <RmIntegerVariable NAME="Height" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="356" MIN="-10" MAX="10" CLAMP="FALSE"/>
+        <RmIntegerVariable NAME="ShowStatus" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="1" MIN="-10" MAX="10" CLAMP="FALSE"/>
+        <RmIntegerVariable NAME="Visible" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="0" MIN="-10" MAX="10" CLAMP="FALSE"/>
+        <RmIntegerVariable NAME="Minimized X" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="-1" MIN="-10" MAX="10" CLAMP="FALSE"/>
+        <RmIntegerVariable NAME="Minimized Y" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="-1" MIN="-10" MAX="10" CLAMP="FALSE"/>
+       </RmRegistryBranch>
+       <RmRegistryBranch NAME="Effect Workspace.Textured Phong.halfscreen1" API="" XML_VERSION="RenderMonkey 1.71">
+        <RmIntegerVariable NAME="X" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="222" MIN="-10" MAX="10" CLAMP="FALSE"/>
+        <RmIntegerVariable NAME="Y" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="122" MIN="-10" MAX="10" CLAMP="FALSE"/>
+        <RmIntegerVariable NAME="Width" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="210" MIN="-10" MAX="10" CLAMP="FALSE"/>
+        <RmIntegerVariable NAME="Height" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="356" MIN="-10" MAX="10" CLAMP="FALSE"/>
+        <RmIntegerVariable NAME="ShowStatus" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="1" MIN="-10" MAX="10" CLAMP="FALSE"/>
+        <RmIntegerVariable NAME="Visible" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="0" MIN="-10" MAX="10" CLAMP="FALSE"/>
+        <RmIntegerVariable NAME="Minimized X" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="-1" MIN="-10" MAX="10" CLAMP="FALSE"/>
+        <RmIntegerVariable NAME="Minimized Y" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="-1" MIN="-10" MAX="10" CLAMP="FALSE"/>
+       </RmRegistryBranch>
+       <RmRegistryBranch NAME="Effect Workspace.Textured Phong.halfscreen2" API="" XML_VERSION="RenderMonkey 1.71">
+        <RmIntegerVariable NAME="X" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="222" MIN="-10" MAX="10" CLAMP="FALSE"/>
+        <RmIntegerVariable NAME="Y" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="122" MIN="-10" MAX="10" CLAMP="FALSE"/>
+        <RmIntegerVariable NAME="Width" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="210" MIN="-10" MAX="10" CLAMP="FALSE"/>
+        <RmIntegerVariable NAME="Height" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="356" MIN="-10" MAX="10" CLAMP="FALSE"/>
+        <RmIntegerVariable NAME="ShowStatus" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="1" MIN="-10" MAX="10" CLAMP="FALSE"/>
+        <RmIntegerVariable NAME="Visible" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="0" MIN="-10" MAX="10" CLAMP="FALSE"/>
+        <RmIntegerVariable NAME="Minimized X" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="-1" MIN="-10" MAX="10" CLAMP="FALSE"/>
+        <RmIntegerVariable NAME="Minimized Y" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="-1" MIN="-10" MAX="10" CLAMP="FALSE"/>
+       </RmRegistryBranch>
+      </RmRegistryBranch>
      </RmRegistryBranch>
      <RmRegistryBranch NAME="RmRenderTargetEditor" API="" XML_VERSION="RenderMonkey 1.71">
       <RmRegistryBranch NAME="EditNodeRepository" API="" XML_VERSION="RenderMonkey 1.71"/>
+      <RmRegistryBranch NAME="NodeRepository" API="" XML_VERSION="RenderMonkey 1.71">
+       <RmRegistryBranch NAME="Effect Workspace.Textured Phong.Pass Teapot.screen" API="" XML_VERSION="RenderMonkey 1.71">
+        <RmIntegerVariable NAME="X" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="222" MIN="-10" MAX="10" CLAMP="FALSE"/>
+        <RmIntegerVariable NAME="Y" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="122" MIN="-10" MAX="10" CLAMP="FALSE"/>
+        <RmIntegerVariable NAME="Width" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="239" MIN="-10" MAX="10" CLAMP="FALSE"/>
+        <RmIntegerVariable NAME="Height" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="238" MIN="-10" MAX="10" CLAMP="FALSE"/>
+        <RmIntegerVariable NAME="ShowStatus" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="1" MIN="-10" MAX="10" CLAMP="FALSE"/>
+        <RmIntegerVariable NAME="Visible" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="0" MIN="-10" MAX="10" CLAMP="FALSE"/>
+        <RmIntegerVariable NAME="Minimized X" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="-1" MIN="-10" MAX="10" CLAMP="FALSE"/>
+        <RmIntegerVariable NAME="Minimized Y" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="-1" MIN="-10" MAX="10" CLAMP="FALSE"/>
+       </RmRegistryBranch>
+       <RmRegistryBranch NAME="Effect Workspace.Textured Phong.Pass Spring.screen" API="" XML_VERSION="RenderMonkey 1.71">
+        <RmIntegerVariable NAME="X" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="222" MIN="-10" MAX="10" CLAMP="FALSE"/>
+        <RmIntegerVariable NAME="Y" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="122" MIN="-10" MAX="10" CLAMP="FALSE"/>
+        <RmIntegerVariable NAME="Width" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="239" MIN="-10" MAX="10" CLAMP="FALSE"/>
+        <RmIntegerVariable NAME="Height" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="238" MIN="-10" MAX="10" CLAMP="FALSE"/>
+        <RmIntegerVariable NAME="ShowStatus" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="1" MIN="-10" MAX="10" CLAMP="FALSE"/>
+        <RmIntegerVariable NAME="Visible" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="0" MIN="-10" MAX="10" CLAMP="FALSE"/>
+        <RmIntegerVariable NAME="Minimized X" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="-1" MIN="-10" MAX="10" CLAMP="FALSE"/>
+        <RmIntegerVariable NAME="Minimized Y" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="-1" MIN="-10" MAX="10" CLAMP="FALSE"/>
+       </RmRegistryBranch>
+       <RmRegistryBranch NAME="Effect Workspace.Textured Phong.Pass Water.screen" API="" XML_VERSION="RenderMonkey 1.71">
+        <RmIntegerVariable NAME="X" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="222" MIN="-10" MAX="10" CLAMP="FALSE"/>
+        <RmIntegerVariable NAME="Y" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="122" MIN="-10" MAX="10" CLAMP="FALSE"/>
+        <RmIntegerVariable NAME="Width" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="239" MIN="-10" MAX="10" CLAMP="FALSE"/>
+        <RmIntegerVariable NAME="Height" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="238" MIN="-10" MAX="10" CLAMP="FALSE"/>
+        <RmIntegerVariable NAME="ShowStatus" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="1" MIN="-10" MAX="10" CLAMP="FALSE"/>
+        <RmIntegerVariable NAME="Visible" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="0" MIN="-10" MAX="10" CLAMP="FALSE"/>
+        <RmIntegerVariable NAME="Minimized X" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="-1" MIN="-10" MAX="10" CLAMP="FALSE"/>
+        <RmIntegerVariable NAME="Minimized Y" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="-1" MIN="-10" MAX="10" CLAMP="FALSE"/>
+       </RmRegistryBranch>
+      </RmRegistryBranch>
      </RmRegistryBranch>
      <RmRegistryBranch NAME="RmShaderEditor" API="" XML_VERSION="RenderMonkey 1.71">
       <RmRegistryBranch NAME="Effect Workspace.Textured Phong" API="" XML_VERSION="RenderMonkey 1.71">
@@ -945,10 +1009,10 @@
        <RmStringVariable NAME="Editing Shader" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC=""><RmTextDataBlock TYPE="TEXT"><![CDATA[
 Vertex Shader]]></RmTextDataBlock></RmStringVariable>
        <RmStringVariable NAME="Editing Pass" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC=""><RmTextDataBlock TYPE="TEXT"><![CDATA[
-Pass Spring]]></RmTextDataBlock></RmStringVariable>
+Pass Water]]></RmTextDataBlock></RmStringVariable>
        <RmIntegerVariable NAME="Y" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="48" MIN="-10" MAX="10" CLAMP="FALSE"/>
-       <RmIntegerVariable NAME="Width" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="650" MIN="-10" MAX="10" CLAMP="FALSE"/>
-       <RmIntegerVariable NAME="Height" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="549" MIN="-10" MAX="10" CLAMP="FALSE"/>
+       <RmIntegerVariable NAME="Width" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="425" MIN="-10" MAX="10" CLAMP="FALSE"/>
+       <RmIntegerVariable NAME="Height" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="524" MIN="-10" MAX="10" CLAMP="FALSE"/>
        <RmIntegerVariable NAME="ShowStatus" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="1" MIN="-10" MAX="10" CLAMP="FALSE"/>
        <RmIntegerVariable NAME="Visible" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="1" MIN="-10" MAX="10" CLAMP="FALSE"/>
        <RmIntegerVariable NAME="Minimized X" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="-1" MIN="-10" MAX="10" CLAMP="FALSE"/>
@@ -1018,6 +1082,12 @@ Pass Spring]]></RmTextDataBlock></RmStringVariable>
        <RmRegistryBranch NAME="Effect Workspace.Textured Phong.vmax" API="" XML_VERSION="RenderMonkey 1.71">
         <RmIntegerVariable NAME="DockPaneID" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="1107" MIN="-10" MAX="10" CLAMP="FALSE"/>
        </RmRegistryBranch>
+       <RmRegistryBranch NAME="Effect Workspace.Textured Phong.blurscale" API="" XML_VERSION="RenderMonkey 1.71">
+        <RmIntegerVariable NAME="DockPaneID" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="1108" MIN="-10" MAX="10" CLAMP="FALSE"/>
+       </RmRegistryBranch>
+       <RmRegistryBranch NAME="Effect Workspace.Textured Phong.luminance_cutoff" API="" XML_VERSION="RenderMonkey 1.71">
+        <RmIntegerVariable NAME="DockPaneID" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="1109" MIN="-10" MAX="10" CLAMP="FALSE"/>
+       </RmRegistryBranch>
       </RmRegistryBranch>
      </RmRegistryBranch>
      <RmRegistryBranch NAME="RmStreamEditor" API="" XML_VERSION="RenderMonkey 1.71">
@@ -1045,7 +1115,7 @@ Pass Spring]]></RmTextDataBlock></RmStringVariable>
     </RmRegistryBranch>
     <RmRegistryBranch NAME="WORKSPACE" API="" XML_VERSION="RenderMonkey 1.71">
      <RmStringVariable NAME="LAST_SAVE" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC=""><RmTextDataBlock TYPE="TEXT"><![CDATA[
-6/5/2015 12:37:46]]></RmTextDataBlock></RmStringVariable>
+6/5/2015 15:7:31]]></RmTextDataBlock></RmStringVariable>
      <RmStringVariable NAME="VERSION" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC=""><RmTextDataBlock TYPE="TEXT"><![CDATA[
 RenderMonkey Version 1.82 (build 322)]]></RmTextDataBlock></RmStringVariable>
      <RmStringVariable NAME="XML_VERSION" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC=""><RmTextDataBlock TYPE="TEXT"><![CDATA[
@@ -1056,27 +1126,40 @@ C:\Users\Arkady\Documents\Visual Studio 2013\Projects\Computer Graphics\Rendermo
    </RmRegistryBranch>
   </RmRegistryBranch>
   <RmDirectXEffect NAME="Textured Phong" API="D3D" ACTIVE_CAMERA="">
-   <RmMatrixVariable NAME="matViewProjection" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="ViewProjection" VALUE_0="1.086671" VALUE_1="-0.000525" VALUE_2="-0.182915" VALUE_3="0.000000" VALUE_4="0.046302" VALUE_5="2.398825" VALUE_6="0.268180" VALUE_7="0.001432" VALUE_8="0.165045" VALUE_9="-0.112837" VALUE_10="0.980832" VALUE_11="291.477386" VALUE_12="0.164880" VALUE_13="-0.112724" VALUE_14="0.979851" VALUE_15="292.185913"/>
+   <RmMatrixVariable NAME="matViewProjection" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="ViewProjection" VALUE_0="1.497625" VALUE_1="0.090955" VALUE_2="-1.815267" VALUE_3="-0.000036" VALUE_4="0.961052" VALUE_5="2.026044" VALUE_6="0.894400" VALUE_7="0.004586" VALUE_8="0.661832" VALUE_9="-0.542966" VALUE_10="0.518816" VALUE_11="408.198914" VALUE_12="0.661170" VALUE_13="-0.542423" VALUE_14="0.518297" VALUE_15="408.790710"/>
    <RmMatrixVariable NAME="matView" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="View" VALUE_0="0.566077" VALUE_1="0.125432" VALUE_2="0.814754" VALUE_3="0.000000" VALUE_4="-0.270456" VALUE_5="0.961908" VALUE_6="0.039822" VALUE_7="0.000823" VALUE_8="-0.778725" VALUE_9="-0.242894" VALUE_10="0.578438" VALUE_11="200.000000" VALUE_12="0.000000" VALUE_13="0.000000" VALUE_14="0.000000" VALUE_15="1.000000"/>
-   <RmMatrixVariable NAME="matViewInverse" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="ViewInverse" VALUE_0="0.986127" VALUE_1="0.019179" VALUE_2="0.164880" VALUE_3="-48.175655" VALUE_4="-0.000477" VALUE_5="0.993626" VALUE_6="-0.112726" VALUE_7="32.936493" VALUE_8="-0.165991" VALUE_9="0.111082" VALUE_10="0.979851" VALUE_11="-286.298615" VALUE_12="0.000000" VALUE_13="-0.000000" VALUE_14="0.000000" VALUE_15="1.000000"/>
-   <RmFloatVariable NAME="exposure" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="1.000000" MIN="-1.000000" MAX="1.000000" CLAMP="FALSE"/>
+   <RmMatrixVariable NAME="matViewInverse" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="ViewInverse" VALUE_0="0.635916" VALUE_1="0.398078" VALUE_2="0.661168" VALUE_3="-270.280029" VALUE_4="0.038621" VALUE_5="0.839217" VALUE_6="-0.542427" VALUE_7="221.737381" VALUE_8="-0.770792" VALUE_9="0.370470" VALUE_10="0.518296" VALUE_11="-211.875183" VALUE_12="0.000000" VALUE_13="0.000000" VALUE_14="0.000000" VALUE_15="1.000000"/>
+   <RmFloatVariable NAME="exposure" API="" ARTIST_EDITABLE="TRUE" VARIABLE_SEMANTIC="" VALUE="0.680000" MIN="-1.000000" MAX="1.000000" CLAMP="FALSE"/>
    <RmFloatVariable NAME="l" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="1000.000000" MIN="-1.000000" MAX="1.000000" CLAMP="FALSE"/>
    <RmFloatVariable NAME="h0" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="100.000000" MIN="-1.000000" MAX="1.000000" CLAMP="FALSE"/>
    <RmFloatVariable NAME="r" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="30.000000" MIN="-1.000000" MAX="1.000000" CLAMP="FALSE"/>
    <RmFloatVariable NAME="rsmall" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="6.000000" MIN="-1.000000" MAX="1.000000" CLAMP="FALSE"/>
-   <RmFloatVariable NAME="time" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="Time0_X" VALUE="3.722127" MIN="-1.000000" MAX="1.000000" CLAMP="FALSE"/>
+   <RmFloatVariable NAME="time" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="Time0_X" VALUE="6.341531" MIN="-1.000000" MAX="1.000000" CLAMP="FALSE"/>
    <RmFloatVariable NAME="thalf" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="3.000000" MIN="-1.000000" MAX="1.000000" CLAMP="FALSE"/>
    <RmFloatVariable NAME="xmax" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="20.000000" MIN="-1.000000" MAX="1.000000" CLAMP="FALSE"/>
    <RmFloatVariable NAME="vmax" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="150.000000" MIN="-1.000000" MAX="1.000000" CLAMP="FALSE"/>
-   <RmColorVariable NAME="fvDiffuse" API="" ARTIST_EDITABLE="TRUE" VARIABLE_SEMANTIC="" VALUE_0="0.309804" VALUE_1="0.309804" VALUE_2="0.309804" VALUE_3="1.000000"/>
+   <RmFloatVariable NAME="blurscale" API="" ARTIST_EDITABLE="TRUE" VARIABLE_SEMANTIC="" VALUE="-0.420000" MIN="-1.000000" MAX="1.000000" CLAMP="FALSE"/>
+   <RmDynamicVariable NAME="fInverseViewportDimensions" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="ViewportDimensionsInverse" VARIABLE_TYPE="FLOAT" ROWS="2" COLUMNS="1" FIXED_SIZE="TRUE" MIN="-1.000000" MAX="1.000000" CLAMP="FALSE" NORMALIZE="FALSE">
+    <RmDynamicVariableValueContainer>
+     <RmDynamicVariableValue ROW_INDEX="0" COLUMN_INDEX="0" VALUE="0.002227"/>
+     <RmDynamicVariableValue ROW_INDEX="1" COLUMN_INDEX="0" VALUE="0.002283"/>
+    </RmDynamicVariableValueContainer>
+   </RmDynamicVariable>
+   <RmFloatVariable NAME="luminance_cutoff" API="" ARTIST_EDITABLE="TRUE" VARIABLE_SEMANTIC="" VALUE="0.540000" MIN="-1.000000" MAX="1.000000" CLAMP="FALSE"/>
+   <RmFloatVariable NAME="waterlevel" API="" ARTIST_EDITABLE="TRUE" VARIABLE_SEMANTIC="" VALUE="-0.243200" MIN="-1.000000" MAX="1.000000" CLAMP="FALSE"/>
    <RmColorVariable NAME="fvSpecular" API="" ARTIST_EDITABLE="TRUE" VARIABLE_SEMANTIC="" VALUE_0="0.133333" VALUE_1="0.133333" VALUE_2="0.133333" VALUE_3="1.000000"/>
    <RmColorVariable NAME="fvAmbient" API="" ARTIST_EDITABLE="TRUE" VARIABLE_SEMANTIC="" VALUE_0="0.231373" VALUE_1="0.231373" VALUE_2="0.231373" VALUE_3="1.000000"/>
-   <Rm2DTextureVariable NAME="gloss" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" FILE_NAME="..\..\..\..\..\..\..\Program Files (x86)\AMD\RenderMonkey 1.82\Examples\Media\Textures\Rusty Metal\rustymetalSpec.tga" ORIGIN="0"/>
+   <RmColorVariable NAME="fvDiffuse" API="" ARTIST_EDITABLE="TRUE" VARIABLE_SEMANTIC="" VALUE_0="0.309804" VALUE_1="0.309804" VALUE_2="0.309804" VALUE_3="1.000000"/>
    <Rm2DTextureVariable NAME="base" API="" ARTIST_EDITABLE="TRUE" VARIABLE_SEMANTIC="" FILE_NAME="..\..\..\..\..\..\..\Program Files (x86)\AMD\RenderMonkey 1.82\Examples\Media\Textures\Rusty Metal\rustymetal.tga" ORIGIN="0"/>
    <Rm2DTextureVariable NAME="bump" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" FILE_NAME="..\..\..\..\..\..\..\Program Files (x86)\AMD\RenderMonkey 1.82\Examples\Media\Textures\Rusty Metal\rustymetalBump.tga" ORIGIN="0"/>
-   <RmCubemapVariable NAME="envmap" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" FILE_NAME=".\CubeMap.dds" ORIGIN="0"/>
+   <Rm2DTextureVariable NAME="gloss" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" FILE_NAME="..\..\..\..\..\..\..\Program Files (x86)\AMD\RenderMonkey 1.82\Examples\Media\Textures\Rusty Metal\rustymetalSpec.tga" ORIGIN="0"/>
    <RmCubemapVariable NAME="diffmap" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" FILE_NAME=".\DiffuseCubeMap.dds" ORIGIN="0"/>
    <RmCubemapVariable NAME="specmap" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" FILE_NAME=".\Specular50CubeMap.dds" ORIGIN="0"/>
+   <RmCubemapVariable NAME="envmap" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" FILE_NAME=".\CubeMap.dds" ORIGIN="0"/>
+   <Rm3DTextureVariable NAME="perlin" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" FILE_NAME="..\..\..\..\..\..\..\Program Files (x86)\AMD\RenderMonkey 1.82\Examples\Media\Textures\NoiseVolume.dds" ORIGIN="0"/>
+   <RmRenderableTexture NAME="halfscreen2" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" FILE_NAME="" ORIGIN="0" WIDTH="224" HEIGHT="219" FORMAT="21" USE_VIEWPORT_DIMENSIONS="TRUE" GENERATE_MIPMAPS="FALSE" WIDTH_RATIO="0.500000" HEIGHT_RATIO="0.500000"/>
+   <RmRenderableTexture NAME="screen" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" FILE_NAME="" ORIGIN="0" WIDTH="449" HEIGHT="438" FORMAT="21" USE_VIEWPORT_DIMENSIONS="TRUE" GENERATE_MIPMAPS="FALSE" WIDTH_RATIO="1.000000" HEIGHT_RATIO="1.000000"/>
+   <RmRenderableTexture NAME="halfscreen1" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" FILE_NAME="" ORIGIN="0" WIDTH="224" HEIGHT="219" FORMAT="21" USE_VIEWPORT_DIMENSIONS="TRUE" GENERATE_MIPMAPS="FALSE" WIDTH_RATIO="0.500000" HEIGHT_RATIO="0.500000"/>
    <RmStreamMap NAME="Stream Mapping" API="">
     <RmStream NAME="Stream" API="" STRIDE="56">
      <RmStreamChannel NAME="Position_0" API="" DATA_SIZE="12" DATA_TYPE="2" REGISTER="0" USAGE="0" USAGE_INDEX="0" ATTRIBUTE_NAME="rm_Vertex"/>
@@ -1091,9 +1174,334 @@ C:\Users\Arkady\Documents\Visual Studio 2013\Projects\Computer Graphics\Rendermo
      <RmStreamChannel NAME="Position_0" API="" DATA_SIZE="12" DATA_TYPE="2" REGISTER="0" USAGE="0" USAGE_INDEX="0" ATTRIBUTE_NAME="rm_Vertex"/>
     </RmStream>
    </RmStreamMap>
-   <RmModelData NAME="Cube" API="" FILE_NAME=".\Cube.3ds" ORIENTATION="0"/>
    <RmModelData NAME="Model" API="" FILE_NAME=".\Teapot.3ds" ORIENTATION="0"/>
    <RmModelData NAME="Plane" API="" FILE_NAME=".\teslated_plane.obj" ORIENTATION="0"/>
+   <RmModelData NAME="Cube" API="" FILE_NAME=".\Cube.3ds" ORIENTATION="0"/>
+   <RmModelData NAME="Quad" API="" FILE_NAME=".\ScreenAlignedQuad.3ds" ORIENTATION="0"/>
+   <RmPass NAME="Pass Downsample" API="D3D" PASS_INDEX="4" ENABLED="TRUE">
+    <RmModelReference NAME="Quad" API=""/>
+    <RmHLSLShader NAME="Vertex Shader" API="D3D" PIXEL_SHADER="FALSE" TARGET="vs_2_0" ENTRY_POINT="vs_main" COMPILER_FLAGS="0"><RmShaderCode TYPE="TEXT"><![CDATA[
+struct VS_INPUT 
+{
+   float4 Position : POSITION0;
+   
+};
+
+struct VS_OUTPUT 
+{
+   float4 Position : POSITION0;
+   float2 TexCoord : TEXCOORD0;   
+};
+
+VS_OUTPUT vs_main( VS_INPUT In )
+{
+   VS_OUTPUT Out;
+   Out.Position.xy = sign(In.Position);
+   Out.Position.z = 1.0;
+   Out.Position.w = 1.0;
+   Out.TexCoord.x = Out.Position.x * 0.5 + 0.5;
+   Out.TexCoord.y = 1.0 - (Out.Position.y * 0.5 + 0.5);
+   return Out;
+}
+
+
+
+]]></RmShaderCode></RmHLSLShader>
+    <RmHLSLShader NAME="Pixel Shader" API="D3D" PIXEL_SHADER="TRUE" TARGET="ps_2_0" ENTRY_POINT="ps_main" COMPILER_FLAGS="0"><RmShaderCode TYPE="TEXT"><![CDATA[
+sampler2D src;
+float luminance_cutoff;
+
+float4 ps_main( float2 Tex : TEXCOORD0 ) : COLOR0
+{
+   float4 color = tex2D(src,Tex);
+   return dot(color.xyz,float3(1.0,1.0,1.0)) < luminance_cutoff ? float4(.0,.0,.0,.0) : color;
+}
+
+
+
+]]></RmShaderCode>
+     <RmSampler NAME="src" API="" REGISTER="0"/>
+     <RmShaderConstant NAME="luminance_cutoff" API="" REGISTER="0"/>
+    </RmHLSLShader>
+    <RmRenderTarget NAME="halfscreen1" API="" INDEX="0" RENDER_TO_SCREEN="FALSE" COLOR_CLEAR="TRUE" DEPTH_CLEAR="TRUE" CLEAR_COLOR_VALUE="-16777216" DEPTH_CLEAR_VALUE="1.000000"/>
+    <RmStreamMapReference NAME=" Stream Mapping Plane" API=""/>
+    <RmTextureObject NAME="src" API="D3D" STATE_INDEX="0" VERTEX_TEXTURE="FALSE">
+     <RmTextureReference NAME="screen" API=""/>
+     <RmState NAME="D3DSAMP_ADDRESSU" API="D3D" STATE="1" VALUE="3" USAGE="SAMPLER_STATE"/>
+     <RmState NAME="D3DSAMP_ADDRESSV" API="D3D" STATE="2" VALUE="3" USAGE="SAMPLER_STATE"/>
+    </RmTextureObject>
+   </RmPass>
+   <RmPass NAME="Pass HBlur" API="D3D" PASS_INDEX="5" ENABLED="TRUE">
+    <RmModelReference NAME="Quad" API=""/>
+    <RmHLSLShader NAME="Vertex Shader" API="D3D" PIXEL_SHADER="FALSE" TARGET="vs_2_0" ENTRY_POINT="vs_main" COMPILER_FLAGS="0"><RmShaderCode TYPE="TEXT"><![CDATA[
+struct VS_INPUT 
+{
+   float4 Position : POSITION0;
+   
+};
+
+struct VS_OUTPUT 
+{
+   float4 Position : POSITION0;
+   float2 TexCoord : TEXCOORD0;   
+};
+
+VS_OUTPUT vs_main( VS_INPUT In )
+{
+   VS_OUTPUT Out;
+   Out.Position.xy = sign(In.Position);
+   Out.Position.z = 1.0;
+   Out.Position.w = 1.0;
+   Out.TexCoord.x = Out.Position.x * 0.5 + 0.5;
+   Out.TexCoord.y = 1.0 - (Out.Position.y * 0.5 + 0.5);
+   return Out;
+}
+
+
+
+]]></RmShaderCode></RmHLSLShader>
+    <RmHLSLShader NAME="Pixel Shader" API="D3D" PIXEL_SHADER="TRUE" TARGET="ps_2_0" ENTRY_POINT="ps_main" COMPILER_FLAGS="0"><RmShaderCode TYPE="TEXT"><![CDATA[
+sampler2D src;
+
+static const float blurweights[13] =
+{
+0.002216,
+0.008764,
+0.026995,
+0.064759,
+0.120985,
+0.176033,
+0.199471,
+0.176033,
+0.120985,
+0.064759,
+0.026995,
+0.008764,
+0.002216,
+};
+
+float blurscale;
+float2 fInverseViewportDimensions;
+
+float4 ps_main( float2 Tex : TEXCOORD0 ) : COLOR0
+{
+   float4 Color = 0;
+   float2 fTexelSize = blurscale*2.0*fInverseViewportDimensions;
+   for (int i = 0; i < 13; i++)
+      Color += blurweights[i] *
+   tex2D( src, Tex + float2(((i-6)*2.0-0.5)*fTexelSize.x,0.0).xy );
+   return Color;
+}
+
+
+
+]]></RmShaderCode>
+     <RmSampler NAME="src" API="" REGISTER="0"/>
+     <RmShaderConstant NAME="fInverseViewportDimensions" API="" REGISTER="1"/>
+     <RmShaderConstant NAME="blurscale" API="" REGISTER="0"/>
+    </RmHLSLShader>
+    <RmRenderTarget NAME="halfscreen2" API="" INDEX="0" RENDER_TO_SCREEN="FALSE" COLOR_CLEAR="TRUE" DEPTH_CLEAR="TRUE" CLEAR_COLOR_VALUE="-16777216" DEPTH_CLEAR_VALUE="1.000000"/>
+    <RmStreamMapReference NAME=" Stream Mapping Plane" API=""/>
+    <RmTextureObject NAME="src" API="D3D" STATE_INDEX="0" VERTEX_TEXTURE="FALSE">
+     <RmTextureReference NAME="halfscreen1" API=""/>
+     <RmState NAME="D3DSAMP_ADDRESSU" API="D3D" STATE="1" VALUE="3" USAGE="SAMPLER_STATE"/>
+     <RmState NAME="D3DSAMP_ADDRESSV" API="D3D" STATE="2" VALUE="3" USAGE="SAMPLER_STATE"/>
+    </RmTextureObject>
+   </RmPass>
+   <RmPass NAME="Pass VBlur" API="D3D" PASS_INDEX="6" ENABLED="TRUE">
+    <RmModelReference NAME="Quad" API=""/>
+    <RmHLSLShader NAME="Vertex Shader" API="D3D" PIXEL_SHADER="FALSE" TARGET="vs_2_0" ENTRY_POINT="vs_main" COMPILER_FLAGS="0"><RmShaderCode TYPE="TEXT"><![CDATA[
+struct VS_INPUT 
+{
+   float4 Position : POSITION0;
+   
+};
+
+struct VS_OUTPUT 
+{
+   float4 Position : POSITION0;
+   float2 TexCoord : TEXCOORD0;   
+};
+
+VS_OUTPUT vs_main( VS_INPUT In )
+{
+   VS_OUTPUT Out;
+   Out.Position.xy = sign(In.Position);
+   Out.Position.z = 1.0;
+   Out.Position.w = 1.0;
+   Out.TexCoord.x = Out.Position.x * 0.5 + 0.5;
+   Out.TexCoord.y = 1.0 - (Out.Position.y * 0.5 + 0.5);
+   return Out;
+}
+
+
+
+]]></RmShaderCode></RmHLSLShader>
+    <RmHLSLShader NAME="Pixel Shader" API="D3D" PIXEL_SHADER="TRUE" TARGET="ps_2_0" ENTRY_POINT="ps_main" COMPILER_FLAGS="0"><RmShaderCode TYPE="TEXT"><![CDATA[
+sampler2D src;
+
+static const float blurweights[13] =
+{
+0.002216,
+0.008764,
+0.026995,
+0.064759,
+0.120985,
+0.176033,
+0.199471,
+0.176033,
+0.120985,
+0.064759,
+0.026995,
+0.008764,
+0.002216,
+};
+
+float blurscale;
+float2 fInverseViewportDimensions;
+
+float4 ps_main( float2 Tex : TEXCOORD0 ) : COLOR0
+{
+   float4 Color = 0;
+   float2 fTexelSize = blurscale*2.0*fInverseViewportDimensions;
+   for (int i = 0; i < 13; i++)
+      Color += blurweights[i] *
+   tex2D( src, Tex + float2(0.0,((i-6)*2.0-0.5)*fTexelSize.y).xy );
+   return Color;
+}
+
+
+
+]]></RmShaderCode>
+     <RmSampler NAME="src" API="" REGISTER="0"/>
+     <RmShaderConstant NAME="fInverseViewportDimensions" API="" REGISTER="1"/>
+     <RmShaderConstant NAME="blurscale" API="" REGISTER="0"/>
+    </RmHLSLShader>
+    <RmRenderTarget NAME="halfscreen1" API="" INDEX="0" RENDER_TO_SCREEN="TRUE" COLOR_CLEAR="TRUE" DEPTH_CLEAR="TRUE" CLEAR_COLOR_VALUE="-16777216" DEPTH_CLEAR_VALUE="1.000000"/>
+    <RmStreamMapReference NAME=" Stream Mapping Plane" API=""/>
+    <RmTextureObject NAME="src" API="D3D" STATE_INDEX="0" VERTEX_TEXTURE="FALSE">
+     <RmTextureReference NAME="halfscreen2" API=""/>
+     <RmState NAME="D3DSAMP_ADDRESSU" API="D3D" STATE="1" VALUE="3" USAGE="SAMPLER_STATE"/>
+     <RmState NAME="D3DSAMP_ADDRESSV" API="D3D" STATE="2" VALUE="3" USAGE="SAMPLER_STATE"/>
+    </RmTextureObject>
+   </RmPass>
+   <RmPass NAME="Pass Composition" API="D3D" PASS_INDEX="7" ENABLED="TRUE">
+    <RmModelReference NAME="Quad" API=""/>
+    <RmHLSLShader NAME="Vertex Shader" API="D3D" PIXEL_SHADER="FALSE" TARGET="vs_2_0" ENTRY_POINT="vs_main" COMPILER_FLAGS="0"><RmShaderCode TYPE="TEXT"><![CDATA[
+struct VS_INPUT 
+{
+   float4 Position : POSITION0;
+   
+};
+
+struct VS_OUTPUT 
+{
+   float4 Position : POSITION0;
+   float2 TexCoord : TEXCOORD0;   
+};
+
+VS_OUTPUT vs_main( VS_INPUT In )
+{
+   VS_OUTPUT Out;
+   Out.Position.xy = sign(In.Position);
+   Out.Position.z = 1.0;
+   Out.Position.w = 1.0;
+   Out.TexCoord.x = Out.Position.x * 0.5 + 0.5;
+   Out.TexCoord.y = 1.0 - (Out.Position.y * 0.5 + 0.5);
+   return Out;
+}
+
+
+
+]]></RmShaderCode></RmHLSLShader>
+    <RmHLSLShader NAME="Pixel Shader" API="D3D" PIXEL_SHADER="TRUE" TARGET="ps_2_0" ENTRY_POINT="ps_main" COMPILER_FLAGS="0"><RmShaderCode TYPE="TEXT"><![CDATA[
+sampler2D src;
+sampler2D src2;
+float luminance_cutoff;
+
+float4 ps_main( float2 Tex : TEXCOORD0 ) : COLOR0
+{
+   return tex2D(src2,Tex)+tex2D(src,Tex); 
+}
+
+
+
+]]></RmShaderCode>
+     <RmSampler NAME="src" API="" REGISTER="0"/>
+     <RmSampler NAME="src2" API="" REGISTER="1"/>
+    </RmHLSLShader>
+    <RmStreamMapReference NAME=" Stream Mapping Plane" API=""/>
+    <RmTextureObject NAME="src" API="D3D" STATE_INDEX="0" VERTEX_TEXTURE="FALSE">
+     <RmTextureReference NAME="screen" API=""/>
+     <RmState NAME="D3DSAMP_ADDRESSU" API="D3D" STATE="1" VALUE="3" USAGE="SAMPLER_STATE"/>
+     <RmState NAME="D3DSAMP_ADDRESSV" API="D3D" STATE="2" VALUE="3" USAGE="SAMPLER_STATE"/>
+    </RmTextureObject>
+    <RmTextureObject NAME="src2" API="D3D" STATE_INDEX="1" VERTEX_TEXTURE="FALSE">
+     <RmTextureReference NAME="halfscreen1" API=""/>
+    </RmTextureObject>
+   </RmPass>
+   <RmPass NAME="Pass Cube" API="D3D" PASS_INDEX="0" ENABLED="TRUE">
+    <RmModelReference NAME="Cube" API=""/>
+    <RmRenderStateBlock NAME="Render State" API="D3D">
+     <RmState NAME="D3DRS_CULLMODE" API="D3D" STATE="22" VALUE="1" USAGE="RENDER_STATE"/>
+    </RmRenderStateBlock>
+    <RmHLSLShader NAME="Pixel Shader" API="D3D" PIXEL_SHADER="TRUE" TARGET="ps_2_0" ENTRY_POINT="ps_main" COMPILER_FLAGS="0"><RmShaderCode TYPE="TEXT"><![CDATA[
+samplerCUBE envmap;
+float exposure;
+float4 ps_main(float3 TexCoord : TEXCOORD0) : COLOR0
+{   
+   float4 envcol = texCUBE(envmap, TexCoord);
+   return exposure * envcol;
+}
+
+
+
+]]></RmShaderCode>
+     <RmSampler NAME="envmap" API="" REGISTER="0"/>
+     <RmShaderConstant NAME="exposure" API="" REGISTER="0"/>
+    </RmHLSLShader>
+    <RmHLSLShader NAME="Vertex Shader" API="D3D" PIXEL_SHADER="FALSE" TARGET="vs_2_0" ENTRY_POINT="vs_main" COMPILER_FLAGS="0"><RmShaderCode TYPE="TEXT"><![CDATA[
+float4x4 matViewProjection;
+
+struct VS_INPUT 
+{
+   float4 Position : POSITION0;
+   
+};
+
+struct VS_OUTPUT 
+{
+   float4 Position : POSITION0;
+   float3 TexCoord : TEXCOORD0;
+};
+
+VS_OUTPUT vs_main( VS_INPUT Input )
+{
+   VS_OUTPUT Output;
+
+   Output.TexCoord = Input.Position.xyz;
+   Input.Position.xyz *= 400.0;
+   Output.Position = mul( Input.Position, matViewProjection );
+
+   
+   return( Output );
+   
+}
+
+
+
+]]></RmShaderCode>
+     <RmShaderConstant NAME="matViewProjection" API="" REGISTER="0"/>
+    </RmHLSLShader>
+    <RmRenderTarget NAME="screen" API="" INDEX="0" RENDER_TO_SCREEN="FALSE" COLOR_CLEAR="TRUE" DEPTH_CLEAR="TRUE" CLEAR_COLOR_VALUE="-16777216" DEPTH_CLEAR_VALUE="1.000000"/>
+    <RmStreamMapReference NAME="Stream Mapping" API=""/>
+    <RmTextureObject NAME="envmap" API="D3D" STATE_INDEX="0" VERTEX_TEXTURE="FALSE">
+     <RmTextureReference NAME="envmap" API=""/>
+     <RmState NAME="D3DSAMP_MAGFILTER" API="D3D" STATE="5" VALUE="2" USAGE="SAMPLER_STATE"/>
+     <RmState NAME="D3DSAMP_MINFILTER" API="D3D" STATE="6" VALUE="2" USAGE="SAMPLER_STATE"/>
+     <RmState NAME="D3DSAMP_MIPFILTER" API="D3D" STATE="7" VALUE="2" USAGE="SAMPLER_STATE"/>
+    </RmTextureObject>
+   </RmPass>
    <RmPass NAME="Pass Teapot" API="D3D" PASS_INDEX="1" ENABLED="TRUE">
     <RmModelReference NAME="Model" API=""/>
     <RmHLSLShader NAME="Vertex Shader" API="D3D" PIXEL_SHADER="FALSE" TARGET="vs_2_0" ENTRY_POINT="vs_main" COMPILER_FLAGS="0"><RmShaderCode TYPE="TEXT"><![CDATA[
@@ -1207,15 +1615,8 @@ fvTotalSpecular ) );
      <RmShaderConstant NAME="exposure" API="" REGISTER="3"/>
      <RmShaderConstant NAME="fvAmbient" API="" REGISTER="0"/>
     </RmHLSLShader>
+    <RmRenderTarget NAME="screen" API="" INDEX="0" RENDER_TO_SCREEN="FALSE" COLOR_CLEAR="FALSE" DEPTH_CLEAR="FALSE" CLEAR_COLOR_VALUE="-16777216" DEPTH_CLEAR_VALUE="1.000000"/>
     <RmStreamMapReference NAME="Stream Mapping" API=""/>
-    <RmTextureObject NAME="baseMap" API="D3D" STATE_INDEX="0" VERTEX_TEXTURE="FALSE">
-     <RmTextureReference NAME="base" API=""/>
-     <RmState NAME="D3DSAMP_ADDRESSU" API="D3D" STATE="1" VALUE="1" USAGE="SAMPLER_STATE"/>
-     <RmState NAME="D3DSAMP_ADDRESSV" API="D3D" STATE="2" VALUE="1" USAGE="SAMPLER_STATE"/>
-     <RmState NAME="D3DSAMP_MINFILTER" API="D3D" STATE="6" VALUE="2" USAGE="SAMPLER_STATE"/>
-     <RmState NAME="D3DSAMP_MAGFILTER" API="D3D" STATE="5" VALUE="2" USAGE="SAMPLER_STATE"/>
-     <RmState NAME="D3DSAMP_MIPFILTER" API="D3D" STATE="7" VALUE="2" USAGE="SAMPLER_STATE"/>
-    </RmTextureObject>
     <RmTextureObject NAME="diffmap" API="D3D" STATE_INDEX="1" VERTEX_TEXTURE="FALSE">
      <RmTextureReference NAME="diffmap" API=""/>
      <RmState NAME="D3DSAMP_MAGFILTER" API="D3D" STATE="5" VALUE="2" USAGE="SAMPLER_STATE"/>
@@ -1238,6 +1639,14 @@ fvTotalSpecular ) );
      <RmTextureReference NAME="gloss" API=""/>
      <RmState NAME="D3DSAMP_MAGFILTER" API="D3D" STATE="5" VALUE="2" USAGE="SAMPLER_STATE"/>
      <RmState NAME="D3DSAMP_MINFILTER" API="D3D" STATE="6" VALUE="2" USAGE="SAMPLER_STATE"/>
+     <RmState NAME="D3DSAMP_MIPFILTER" API="D3D" STATE="7" VALUE="2" USAGE="SAMPLER_STATE"/>
+    </RmTextureObject>
+    <RmTextureObject NAME="baseMap" API="D3D" STATE_INDEX="0" VERTEX_TEXTURE="FALSE">
+     <RmTextureReference NAME="base" API=""/>
+     <RmState NAME="D3DSAMP_ADDRESSU" API="D3D" STATE="1" VALUE="1" USAGE="SAMPLER_STATE"/>
+     <RmState NAME="D3DSAMP_ADDRESSV" API="D3D" STATE="2" VALUE="1" USAGE="SAMPLER_STATE"/>
+     <RmState NAME="D3DSAMP_MINFILTER" API="D3D" STATE="6" VALUE="2" USAGE="SAMPLER_STATE"/>
+     <RmState NAME="D3DSAMP_MAGFILTER" API="D3D" STATE="5" VALUE="2" USAGE="SAMPLER_STATE"/>
      <RmState NAME="D3DSAMP_MIPFILTER" API="D3D" STATE="7" VALUE="2" USAGE="SAMPLER_STATE"/>
     </RmTextureObject>
    </RmPass>
@@ -1387,15 +1796,8 @@ fvTotalSpecular ) );
      <RmShaderConstant NAME="exposure" API="" REGISTER="3"/>
      <RmShaderConstant NAME="fvAmbient" API="" REGISTER="0"/>
     </RmHLSLShader>
+    <RmRenderTarget NAME="screen" API="" INDEX="0" RENDER_TO_SCREEN="FALSE" COLOR_CLEAR="FALSE" DEPTH_CLEAR="FALSE" CLEAR_COLOR_VALUE="-16777216" DEPTH_CLEAR_VALUE="1.000000"/>
     <RmStreamMapReference NAME=" Stream Mapping Plane" API=""/>
-    <RmTextureObject NAME="baseMap" API="D3D" STATE_INDEX="0" VERTEX_TEXTURE="FALSE">
-     <RmTextureReference NAME="base" API=""/>
-     <RmState NAME="D3DSAMP_ADDRESSU" API="D3D" STATE="1" VALUE="1" USAGE="SAMPLER_STATE"/>
-     <RmState NAME="D3DSAMP_ADDRESSV" API="D3D" STATE="2" VALUE="1" USAGE="SAMPLER_STATE"/>
-     <RmState NAME="D3DSAMP_MINFILTER" API="D3D" STATE="6" VALUE="2" USAGE="SAMPLER_STATE"/>
-     <RmState NAME="D3DSAMP_MAGFILTER" API="D3D" STATE="5" VALUE="2" USAGE="SAMPLER_STATE"/>
-     <RmState NAME="D3DSAMP_MIPFILTER" API="D3D" STATE="7" VALUE="2" USAGE="SAMPLER_STATE"/>
-    </RmTextureObject>
     <RmTextureObject NAME="diffmap" API="D3D" STATE_INDEX="1" VERTEX_TEXTURE="FALSE">
      <RmTextureReference NAME="diffmap" API=""/>
      <RmState NAME="D3DSAMP_MAGFILTER" API="D3D" STATE="5" VALUE="2" USAGE="SAMPLER_STATE"/>
@@ -1420,29 +1822,22 @@ fvTotalSpecular ) );
      <RmState NAME="D3DSAMP_MINFILTER" API="D3D" STATE="6" VALUE="2" USAGE="SAMPLER_STATE"/>
      <RmState NAME="D3DSAMP_MIPFILTER" API="D3D" STATE="7" VALUE="2" USAGE="SAMPLER_STATE"/>
     </RmTextureObject>
+    <RmTextureObject NAME="baseMap" API="D3D" STATE_INDEX="0" VERTEX_TEXTURE="FALSE">
+     <RmTextureReference NAME="base" API=""/>
+     <RmState NAME="D3DSAMP_ADDRESSU" API="D3D" STATE="1" VALUE="1" USAGE="SAMPLER_STATE"/>
+     <RmState NAME="D3DSAMP_ADDRESSV" API="D3D" STATE="2" VALUE="1" USAGE="SAMPLER_STATE"/>
+     <RmState NAME="D3DSAMP_MINFILTER" API="D3D" STATE="6" VALUE="2" USAGE="SAMPLER_STATE"/>
+     <RmState NAME="D3DSAMP_MAGFILTER" API="D3D" STATE="5" VALUE="2" USAGE="SAMPLER_STATE"/>
+     <RmState NAME="D3DSAMP_MIPFILTER" API="D3D" STATE="7" VALUE="2" USAGE="SAMPLER_STATE"/>
+    </RmTextureObject>
    </RmPass>
-   <RmPass NAME="Pass Cube" API="D3D" PASS_INDEX="0" ENABLED="TRUE">
-    <RmModelReference NAME="Cube" API=""/>
-    <RmRenderStateBlock NAME="Render State" API="D3D">
-     <RmState NAME="D3DRS_CULLMODE" API="D3D" STATE="22" VALUE="1" USAGE="RENDER_STATE"/>
-    </RmRenderStateBlock>
-    <RmHLSLShader NAME="Pixel Shader" API="D3D" PIXEL_SHADER="TRUE" TARGET="ps_2_0" ENTRY_POINT="ps_main" COMPILER_FLAGS="0"><RmShaderCode TYPE="TEXT"><![CDATA[
-samplerCUBE envmap;
-float exposure;
-float4 ps_main(float3 TexCoord : TEXCOORD0) : COLOR0
-{   
-   float4 envcol = texCUBE(envmap, TexCoord);
-   return exposure * envcol;
-}
-
-
-
-]]></RmShaderCode>
-     <RmSampler NAME="envmap" API="" REGISTER="0"/>
-     <RmShaderConstant NAME="exposure" API="" REGISTER="0"/>
-    </RmHLSLShader>
+   <RmPass NAME="Pass Water" API="D3D" PASS_INDEX="3" ENABLED="TRUE">
+    <RmModelReference NAME="Plane" API=""/>
     <RmHLSLShader NAME="Vertex Shader" API="D3D" PIXEL_SHADER="FALSE" TARGET="vs_2_0" ENTRY_POINT="vs_main" COMPILER_FLAGS="0"><RmShaderCode TYPE="TEXT"><![CDATA[
 float4x4 matViewProjection;
+float waterlevel;
+float time;
+float4x4 matViewInverse;
 
 struct VS_INPUT 
 {
@@ -1453,17 +1848,24 @@ struct VS_INPUT
 struct VS_OUTPUT 
 {
    float4 Position : POSITION0;
-   float3 TexCoord : TEXCOORD0;
+   float3 PosWorld : TEXCOORD0;
+   float3 ViewDir : TEXCOORD1;
+   float3 NoiseCoord : TEXCOORD2;
 };
 
 VS_OUTPUT vs_main( VS_INPUT Input )
 {
    VS_OUTPUT Output;
-
-   Output.TexCoord = Input.Position.xyz;
+   
+   Output.NoiseCoord = float3(Input.Position.xy*10.0, time);
+   Input.Position.xz = (Input.Position.xy + float2(-0.5,-0.5)) * 2.0;
+   Input.Position.y = waterlevel;
    Input.Position.xyz *= 400.0;
+   
    Output.Position = mul( Input.Position, matViewProjection );
-
+   
+   Output.ViewDir = mul( float4(0,0,0,1), matViewInverse ) - Input.Position;
+   Output.PosWorld = Input.Position.xyz / 400.0;
    
    return( Output );
    
@@ -1472,14 +1874,63 @@ VS_OUTPUT vs_main( VS_INPUT Input )
 
 
 ]]></RmShaderCode>
+     <RmShaderConstant NAME="matViewInverse" API="" REGISTER="4"/>
      <RmShaderConstant NAME="matViewProjection" API="" REGISTER="0"/>
+     <RmShaderConstant NAME="time" API="" REGISTER="8"/>
+     <RmShaderConstant NAME="waterlevel" API="" REGISTER="7"/>
     </RmHLSLShader>
+    <RmHLSLShader NAME="Pixel Shader" API="D3D" PIXEL_SHADER="TRUE" TARGET="ps_2_0" ENTRY_POINT="ps_main" COMPILER_FLAGS="0"><RmShaderCode TYPE="TEXT"><![CDATA[
+float exposure;
+samplerCUBE envmap;
+sampler3D perlin;
+
+const float rzero = pow((1.33 - 1.0)/(1.33 + 1.0), 2.0);
+
+float fresnel(float cosfi)
+{
+   return rzero + (1.0-rzero) * pow(1.0-cosfi, 5.0);
+};
+
+float3 ray_to_texcoord(float3 p, float3 d)
+{
+   float3 tr = (float3(1.0, 1.0, 1.0) - p) / d;
+   float3 tl = (float3(-1.0, -1.0, -1.0) - p) / d;
+   float3 tmax = float3(max(tl.x, tr.x), max(tl.y, tr.y), max(tl.z, tr.z));
+   float t = min(tmax.x, min(tmax.y, tmax.z));
+   return p + t * d;
+};
+
+float4 ps_main(float3 Position : TEXCOORD0, float4 ViewDir : TEXCOORD1, float3 NoiseCoord : TEXCOORD2) : COLOR0
+{
+   float2 error =  2.0 * float2(tex3D(perlin, NoiseCoord).r, tex3D(perlin, NoiseCoord + float3(0.5, 0.5, 0.5)).r) - float2(1.0, 1.0);
+   float3 Normal = normalize( float3(error.x,20.0,error.y) );
+   ViewDir = normalize(ViewDir);
+   float3 ViewRefl = reflect( -ViewDir, Normal );
+   float3 ViewRefr = normalize(-ViewDir-1.5*Normal);   
+   
+   ViewRefl = ray_to_texcoord( Position, ViewRefl );
+   ViewRefr = ray_to_texcoord( Position, ViewRefr );
+   float4 refl = exposure * texCUBE( envmap, ViewRefl );
+   float4 refr = float4(.7,.8,1.0,1.0)* exposure * texCUBE( envmap, ViewRefr );
+   float w = fresnel(abs(normalize(ViewDir).y));
+   return( lerp(refr,refl,w) );
+}
+
+
+
+]]></RmShaderCode>
+     <RmSampler NAME="envmap" API="" REGISTER="0"/>
+     <RmSampler NAME="perlin" API="" REGISTER="1"/>
+     <RmShaderConstant NAME="exposure" API="" REGISTER="0"/>
+     <RmShaderConstant NAME="rzero" API="" REGISTER="1"/>
+    </RmHLSLShader>
+    <RmRenderTarget NAME="screen" API="" INDEX="0" RENDER_TO_SCREEN="FALSE" COLOR_CLEAR="FALSE" DEPTH_CLEAR="FALSE" CLEAR_COLOR_VALUE="-16777216" DEPTH_CLEAR_VALUE="1.000000"/>
     <RmStreamMapReference NAME="Stream Mapping" API=""/>
     <RmTextureObject NAME="envmap" API="D3D" STATE_INDEX="0" VERTEX_TEXTURE="FALSE">
      <RmTextureReference NAME="envmap" API=""/>
-     <RmState NAME="D3DSAMP_MAGFILTER" API="D3D" STATE="5" VALUE="2" USAGE="SAMPLER_STATE"/>
-     <RmState NAME="D3DSAMP_MINFILTER" API="D3D" STATE="6" VALUE="2" USAGE="SAMPLER_STATE"/>
-     <RmState NAME="D3DSAMP_MIPFILTER" API="D3D" STATE="7" VALUE="2" USAGE="SAMPLER_STATE"/>
+    </RmTextureObject>
+    <RmTextureObject NAME="perlin" API="D3D" STATE_INDEX="1" VERTEX_TEXTURE="FALSE">
+     <RmTextureReference NAME="perlin" API=""/>
     </RmTextureObject>
    </RmPass>
   </RmDirectXEffect>
