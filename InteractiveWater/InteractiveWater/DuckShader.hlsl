@@ -1,6 +1,5 @@
 Texture2D colorMap : register(t0);
 SamplerState colorSampler : register(s0);
-static const float transparency = 0.35f;
 
 cbuffer cbWorld : register(b0) //Vertex Shader constant buffer slot 0
 {
@@ -26,6 +25,7 @@ struct VSInput
 {
 	float3 pos : POSITION;
 	float3 norm : NORMAL0;
+	float2 tex : TEXCOORD0;
 };
 
 struct PSInput
@@ -39,7 +39,7 @@ PSInput VS_Main(VSInput i)
 	PSInput o = (PSInput)0;
 	o.pos = float4(i.pos, 1.0f);
 
-	o.tex = mul(texMatrix, o.pos).xy;
+	o.tex = i.tex;
 
 	o.pos = mul(worldMatrix, o.pos);
 	o.pos = mul(viewMatrix, o.pos);
@@ -51,6 +51,5 @@ PSInput VS_Main(VSInput i)
 float4 PS_Main(PSInput i) : SV_TARGET
 {
 	float4 result = colorMap.Sample(colorSampler, i.tex);
-	result.a = transparency;
 	return result;
 }

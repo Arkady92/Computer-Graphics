@@ -81,6 +81,9 @@
     <ClInclude Include="gk2_room.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="gk2_colorTexEffect.h">
+      <Filter>Header Files\effects</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="gk2_effectBase.cpp">
@@ -131,9 +134,15 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="gk2_colorTexEffect.cpp">
+      <Filter>Source Files\effects</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="kaczka.pdf" />
+    <None Include="resources\shaders\CubeMapShader.hlsl">
+      <Filter>Resource Files\shaders</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Text Include="resources\meshes\duck.txt">
@@ -144,13 +153,10 @@
     <Image Include="resources\textures\ducktex.jpg">
       <Filter>Resource Files\textures</Filter>
     </Image>
-    <Image Include="resources\textures\forest.jpg">
+    <Image Include="resources\textures\cubic_map.png">
       <Filter>Resource Files\textures</Filter>
     </Image>
-    <Image Include="resources\textures\sky.png">
-      <Filter>Resource Files\textures</Filter>
-    </Image>
-    <Image Include="resources\textures\bottom.jpg">
+    <Image Include="resources\textures\water.jpg">
       <Filter>Resource Files\textures</Filter>
     </Image>
   </ItemGroup>
@@ -159,6 +165,9 @@
       <Filter>Resource Files\shaders</Filter>
     </FxCompile>
     <FxCompile Include="resources\shaders\TextureShader.hlsl">
+      <Filter>Resource Files\shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="resources\shaders\ColorTexShader.hlsl">
       <Filter>Resource Files\shaders</Filter>
     </FxCompile>
   </ItemGroup>

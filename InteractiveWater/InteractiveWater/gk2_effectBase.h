@@ -30,10 +30,9 @@ namespace gk2
 		std::shared_ptr<gk2::CBMatrix> m_projCB;
 		std::shared_ptr<ID3D11DeviceContext> m_context;
 
-		void Initialize(gk2::DeviceHelper& device, std::shared_ptr<ID3D11InputLayout>& layout,
+		virtual void Initialize(gk2::DeviceHelper& device, std::shared_ptr<ID3D11InputLayout>& layout,
 						const std::wstring& shaderFile);
 
-	private:
 		std::shared_ptr<ID3D11VertexShader> m_vs;
 		std::shared_ptr<ID3D11PixelShader> m_ps;
 		std::shared_ptr<ID3D11InputLayout> m_layout;

@@ -20,6 +20,16 @@ namespace gk2
 		static const unsigned int LayoutElements = 2;
 		static const D3D11_INPUT_ELEMENT_DESC Layout[LayoutElements];
 	};
+
+	struct VertexPosNormalCoord
+	{
+		XMFLOAT3 Pos;
+		XMFLOAT3 Normal;
+		float u;
+		float v;
+		static const unsigned int LayoutElements = 4;
+		static const D3D11_INPUT_ELEMENT_DESC Layout[LayoutElements];
+	};
 }
 
 #endif __GK2_VERTICES_H_

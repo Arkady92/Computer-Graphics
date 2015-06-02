@@ -23,6 +23,7 @@ namespace gk2
 		gk2::Mesh GetQuad(float width, float height);
 		gk2::Mesh GetCircle(int resolution, float radius);
 		gk2::Mesh LoadMesh(const std::wstring& fileName);
+		gk2::Mesh LoadMeshForDuck(const std::wstring& fileName);
 		gk2::Mesh LoadMeshForPuma(const std::wstring& fileName, Mesh& shadowVolumes, XMFLOAT4 lightPosition);
 
 	private:

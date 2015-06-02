@@ -344,6 +344,33 @@ Mesh MeshLoader::LoadMesh(const wstring& fileName)
 		m_device.CreateIndexBuffer(indices), in);
 }
 
+Mesh MeshLoader::LoadMeshForDuck(const wstring& fileName)
+{
+	ifstream input;
+	input.exceptions(ios::badbit | ios::failbit | ios::eofbit); //Most of the time you really shouldn't throw
+	//exceptions in case of eof, but here if end of file was
+	//reached before the whole mesh was loaded, we would
+	//have had to throw an exception anyway.
+	int n, in;
+	input.open(fileName);
+	input >> n;
+	vector<VertexPosNormalCoord> vertices(n);
+	for (int i = 0; i < n; ++i)
+	{
+		input >> vertices[i].Pos.x >> vertices[i].Pos.y >> vertices[i].Pos.z;
+		input >> vertices[i].Normal.x >> vertices[i].Normal.y >> vertices[i].Normal.z;
+		input >> vertices[i].u >> vertices[i].v;
+	}
+	input >> in;
+	in *= 3;
+	vector<unsigned short> indices(in);
+	for (int i = 0; i < in; i+=3)
+		input >> indices[i] >> indices[i+1] >> indices[i + 2];
+	input.close();
+	return Mesh(m_device.CreateVertexBuffer(vertices), sizeof(VertexPosNormalCoord),
+		m_device.CreateIndexBuffer(indices), in);
+}
+
 
 Mesh MeshLoader::LoadMeshForPuma(const wstring& fileName, Mesh& shadowVolume, XMFLOAT4 lightPosition)
 {
