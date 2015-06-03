@@ -45,7 +45,7 @@ struct PSInput
 	float3 lightVec : TEXCOORD4;
 };
 
-static const float3 lightPos = float3(-5.0f, 5.0f, -5.0f);
+static const float3 lightPos = float3(5.0f, 5.0f, 5.0f);
 
 PSInput VS_Main(VSInput i)
 {
@@ -60,7 +60,8 @@ PSInput VS_Main(VSInput i)
 	o.pos = mul(projMatrix, o.pos);
 
 	o.pos2 = o.pos;
-	o.norm = mul(worldMatrix, -i.norm);
+	o.norm = float4(i.norm, 1.0f);
+	o.norm = mul(worldMatrix, o.norm);
 	o.norm = mul(viewMatrix, o.norm);
 	o.norm = mul(projMatrix, o.norm);
 
@@ -75,7 +76,7 @@ float4 PS_Main(PSInput i) : SV_TARGET
 	float4 col = colorMap.Sample(colorSampler, i.tex);
 
 	float4 tempPos = float4(i.pos2.xyz, 1);
-	float3 worldSpacePos = mul(tempPos, (float4x3)worldMatrix);
+	float3 worldSpacePos = mul(worldMatrix, tempPos);
 	float3 vertToEye = normalize(i.viewVec - worldSpacePos);
 	float3 halfAngle = normalize(vertToEye + i.lightVec);
 	float2 uv;
@@ -83,6 +84,8 @@ float4 PS_Main(PSInput i) : SV_TARGET
 	uv.y = clamp(max(dot(halfAngle, i.norm), 0.0), 0.0, 1.0);
 
 	float4 d = colorMapA.Sample(colorSampler, uv);
+	if (uv.x == 0 && uv.y == 0)
+		d.a = 0.0f;
 	float4 res;
 	res.xyz = (col.xyz * d.aaa) * 2.0;
 	res.w = 1.0;

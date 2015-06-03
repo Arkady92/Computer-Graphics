@@ -46,7 +46,7 @@ void Room::InitializeTextures()
 	m_cubicMapTexture = m_device.CreateShaderResourceView(L"resources/textures/cubic_map.png");
 	m_duckTexture = m_device.CreateShaderResourceView(L"resources/textures/ducktex.jpg");
 	m_anisotrophyTexture = m_device.CreateShaderResourceView(L"resources/textures/Anisotrophy.png");
-	m_waterBaseTexture = m_device.CreateShaderResourceView(L"resources/textures/water.jpg");
+	m_waterBaseTexture = m_device.CreateShaderResourceView(L"resources/textures/bottom.jpg");
 	m_skyTexture = m_device.CreateShaderResourceView(L"resources/textures/sky.png");
 	m_bottomTexture = m_device.CreateShaderResourceView(L"resources/textures/bottom.jpg");
 	m_forestTexture = m_device.CreateShaderResourceView(L"resources/textures/forest.jpg");
@@ -125,14 +125,14 @@ void Room::CreateScene()
 	m_lightPosCB->Update(m_context, LIGHT_POS);
 	m_textureCB->Update(m_context, XMMatrixScaling(0.5f, 0.5f, 0.5f) * XMMatrixTranslation(0.5f, 0.5f, 0.0f) * XMMatrixRotationZ(XM_PI));
 	m_textureCB2->Update(m_context, XMMatrixScaling(0.5f, 0.5f, 0.5f) * XMMatrixTranslation(0.5f, 0.5f, 0.0f) * XMMatrixRotationZ(XM_PI));
-	m_colorTextureCB->Update(m_context, XMMatrixIdentity());
+	m_colorTextureCB->Update(m_context, XMMatrixScaling(0.5f, 0.5f, 0.5f) * XMMatrixRotationX(XM_PIDIV4));
 }
 
 void Room::UpdateDuck(float dt)
 {
 	const int factor[] = { 1, -1 };
 	duckPositionParameter += dt * duckStepFactor;
-	if (duckPositionParameter > 2.0f / 3.0f)
+	if (duckPositionParameter >= 2.0f / 3.0f)
 	{
 		deBoorsPoints[0] = deBoorsPoints[1];
 		deBoorsPoints[1] = deBoorsPoints[2];
@@ -142,7 +142,8 @@ void Room::UpdateDuck(float dt)
 		duckPositionParameter = 1.0f / 3.0f;
 	}
 	XMFLOAT3 currentDuckPosition = GetDuckPosition(duckPositionParameter);
-	float alpha = atan((currentDuckPosition.z - duckPosition.z) / (currentDuckPosition.x - duckPosition.x));
+	if (abs(duckPosition.x - currentDuckPosition.x) < 0.001 && abs(duckPosition.z - currentDuckPosition.z) < 0.001) return;
+	float alpha = atan2((currentDuckPosition.z - duckPosition.z), (currentDuckPosition.x - duckPosition.x));
 	m_duck.setWorldMatrix(baseDuckMatrix * XMMatrixRotationY(XM_PI - alpha) *
 		XMMatrixTranslation(duckPosition.x, duckPosition.y, duckPosition.z));
 	duckPosition = currentDuckPosition;
@@ -380,6 +381,7 @@ void Room::Update(float dt)
 
 void Room::UpdateWater(float dt)
 {
+	if (rand() % 10 != 0) return;
 	shared_ptr<FLOAT> tempData(new FLOAT[N * N], Utils::DeleteArray<FLOAT>);
 	FLOAT *tD = tempData.get();
 	FLOAT *cHA = currentHeightsArray.get();

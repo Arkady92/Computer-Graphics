@@ -45,13 +45,23 @@ struct PSInput
 
 static const float3 lightPos = float3(-5.0f, 5.0f, -5.0f);
 
+
+float3 ray_to_texcoord(float3 p, float3 dir)
+{
+	float dx, dy, dz;
+	dx = -p.x / dir.x + abs(1 / dir.x);
+	dy = -p.y / dir.y + abs(1 / dir.y);
+	dz = -p.z / dir.z + abs(1 / dir.z);
+	return p + min(dx, min(dy, dz)) * dir;
+}
+
 PSInput VS_Main(VSInput i)
 {
 	PSInput o = (PSInput)0;
 	o.pos = float4(i.pos, 1.0f);
 	matrix worldView = mul(viewMatrix, worldMatrix);
 	float4 viewPos = float4(i.pos, 1.0f);
-	viewPos = mul(worldView, viewPos);
+		viewPos = mul(worldView, viewPos);
 
 	o.tex1 = mul(texMatrix1, o.pos).xy;
 	o.tex2 = mul(texMatrix2, o.pos).xy;
@@ -76,14 +86,15 @@ float4 PS_Main(PSInput i) : SV_TARGET
 	float3 viewVec = normalize(i.viewVec);
 	float3 lightVec = normalize(i.lightVec);
 	float3 halfVec = normalize(viewVec + lightVec);
-	float3 color = colorMap1.Sample(colorSampler, i.tex1).xyz / 2;
-	color += lightColor * colorMap1.Sample(colorSampler, i.tex1).xyz * kd * saturate(dot(normal, lightVec)) +
-	lightColor * ks * pow(saturate(dot(normal, halfVec)), m);
-	return float4(saturate(color), colorMap1.Sample(colorSampler, i.tex1).a / 2);
+	float3 ViewRefl = reflect(i.viewVec, normal);
+	float3 ViewRefr = normalize(-i.viewVec - 1.5 * normal);
+	ViewRefr = ray_to_texcoord(i.pos, ViewRefr);
+	ViewRefl = ray_to_texcoord(i.pos, ViewRefl);
+	float4 refl = colorMap1.Sample(colorSampler, ViewRefl);
+		float4 refr = float4(0.7, 1.0, 0.8, 0.1) * colorMap1.Sample(colorSampler, ViewRefr);
 
-	//float4 c1 = colorMap1.Sample(colorSampler, i.tex1);
-	//c1.a = transparency;
-	//float4 c2 = colorMap2.Sample(colorSampler, i.tex2);
-	//c2.a = transparency;
-	//return (c1 * 2 + c2) / 3;
+		float3 color = lerp(refr, refl, 0.3f + 0.7 * abs(dot(-i.viewVec, float3(0, 1, 0))));
+		color += lightColor * colorMap1.Sample(colorSampler, i.tex1).xyz * kd * saturate(dot(normal, lightVec)) +
+		lightColor * ks * pow(saturate(dot(normal, halfVec)), m);
+	return float4(saturate(color), colorMap1.Sample(colorSampler, i.tex1).a / 2);
 }
