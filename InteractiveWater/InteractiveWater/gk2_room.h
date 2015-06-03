@@ -74,6 +74,7 @@ namespace gk2
 		std::shared_ptr<ID3D11InputLayout> m_layout;
 		std::shared_ptr<ID3D11ShaderResourceView> m_cubicMapTexture;
 		std::shared_ptr<ID3D11ShaderResourceView> m_duckTexture;
+		std::shared_ptr<ID3D11ShaderResourceView> m_anisotrophyTexture;
 		std::shared_ptr<ID3D11ShaderResourceView> m_waterTexture;
 		std::shared_ptr<ID3D11ShaderResourceView> m_waterBaseTexture;
 		std::shared_ptr<ID3D11ShaderResourceView> m_skyTexture;

@@ -15,6 +15,7 @@ namespace gk2
 		void SetTextureMtxBuffer(const std::shared_ptr<gk2::CBMatrix>& textureMtx);
 		void SetSamplerState(const std::shared_ptr<ID3D11SamplerState>& samplerState);
 		void SetTexture(const std::shared_ptr<ID3D11ShaderResourceView>& texture);
+		void SetTextureA(const std::shared_ptr<ID3D11ShaderResourceView>& texture);
 		void SetSurfaceColorBuffer(const std::shared_ptr<gk2::ConstantBuffer<XMFLOAT4>>& surfaceColor);
 
 	protected:
@@ -28,6 +29,7 @@ namespace gk2
 		std::shared_ptr<gk2::CBMatrix> m_textureMtxCB;
 		std::shared_ptr<ID3D11SamplerState> m_samplerState;
 		std::shared_ptr<ID3D11ShaderResourceView> m_texture;
+		std::shared_ptr<ID3D11ShaderResourceView> m_textureA;
 		std::shared_ptr<gk2::ConstantBuffer<XMFLOAT4>> m_surfaceColorCB;
 	};
 }

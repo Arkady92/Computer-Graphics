@@ -32,6 +32,12 @@ void ColorTexEffect::SetTexture(const shared_ptr<ID3D11ShaderResourceView>& text
 		m_texture = texture;
 }
 
+void ColorTexEffect::SetTextureA(const shared_ptr<ID3D11ShaderResourceView>& texture)
+{
+	if (texture != nullptr)
+		m_textureA = texture;
+}
+
 void ColorTexEffect::SetSurfaceColorBuffer(const shared_ptr<ConstantBuffer<XMFLOAT4>>& surfaceColor)
 {
 	if (surfaceColor != nullptr)
@@ -51,8 +57,8 @@ void ColorTexEffect::SetPixelShaderData()
 	m_context->PSSetConstantBuffers(0, 1, psb);
 	ID3D11SamplerState* ss[1] = { m_samplerState.get() };
 	m_context->PSSetSamplers(0, 1, ss);
-	ID3D11ShaderResourceView* srv[1] = { m_texture.get() };
-	m_context->PSSetShaderResources(0, 1, srv);
+	ID3D11ShaderResourceView* srv[2] = { m_texture.get(), m_textureA.get() };
+	m_context->PSSetShaderResources(0, 2, srv);
 }
 
 void ColorTexEffect::Initialize(DeviceHelper& device, shared_ptr<ID3D11InputLayout>& layout, const wstring& shaderFile)

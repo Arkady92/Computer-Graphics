@@ -45,6 +45,7 @@ void Room::InitializeTextures()
 {
 	m_cubicMapTexture = m_device.CreateShaderResourceView(L"resources/textures/cubic_map.png");
 	m_duckTexture = m_device.CreateShaderResourceView(L"resources/textures/ducktex.jpg");
+	m_anisotrophyTexture = m_device.CreateShaderResourceView(L"resources/textures/Anisotrophy.png");
 	m_waterBaseTexture = m_device.CreateShaderResourceView(L"resources/textures/water.jpg");
 	m_skyTexture = m_device.CreateShaderResourceView(L"resources/textures/sky.png");
 	m_bottomTexture = m_device.CreateShaderResourceView(L"resources/textures/bottom.jpg");
@@ -258,6 +259,7 @@ bool Room::LoadContent()
 	m_colorTextureEffect->SetTextureMtxBuffer(m_colorTextureCB);
 	m_colorTextureEffect->SetSamplerState(m_samplerWrap);
 	m_colorTextureEffect->SetTexture(m_duckTexture);
+	m_colorTextureEffect->SetTextureA(m_anisotrophyTexture);
 	m_colorTextureEffect->SetSurfaceColorBuffer(m_surfaceColorCB);
 
 	m_phongEffect.reset(new PhongEffect(m_device, m_layout));
