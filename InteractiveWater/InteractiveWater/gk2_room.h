@@ -8,6 +8,8 @@
 #include "gk2_constantBuffer.h"
 #include "gk2_textureEffect.h"
 #include "gk2_colorTexEffect.h"
+#include "gk2_multiTexEffect.h"
+#include "gk2_cubeMapper.h"
 
 namespace gk2
 {
@@ -33,7 +35,16 @@ namespace gk2
 		std::vector<XMFLOAT3> deBoorsPoints;
 		XMMATRIX baseDuckMatrix;
 		float duckPositionParameter = 0.33f;
+		XMFLOAT3 duckPosition;
 		float duckStepFactor = 0.1;
+		int N = 256;
+		float h = 2.0f / (N - 1);
+		float c = 1.0f;
+		float dT = 1.0f / N;
+
+		std::shared_ptr<FLOAT> currentHeightsArray;
+		std::shared_ptr<FLOAT> previousHeightsArray;
+		std::shared_ptr<FLOAT> suppressionsArray;
 
 		gk2::Mesh m_walls[6];
 		gk2::Mesh m_duck;
@@ -48,6 +59,7 @@ namespace gk2
 		std::shared_ptr<gk2::CBMatrix> m_viewCB;
 		std::shared_ptr<gk2::CBMatrix> m_projCB;
 		std::shared_ptr<gk2::CBMatrix> m_textureCB;
+		std::shared_ptr<gk2::CBMatrix> m_textureCB2;
 		std::shared_ptr<gk2::CBMatrix> m_colorTextureCB;
 		std::shared_ptr<gk2::ConstantBuffer<XMFLOAT4>> m_lightPosCB;
 		std::shared_ptr<gk2::ConstantBuffer<XMFLOAT4>> m_surfaceColorCB;
@@ -55,12 +67,19 @@ namespace gk2
 
 		std::shared_ptr<gk2::PhongEffect> m_phongEffect;
 		std::shared_ptr<gk2::TextureEffect> m_textureEffect;
+		std::shared_ptr<gk2::ColorTexEffect> m_colorTextureEffect;
+		std::shared_ptr<gk2::MultiTexEffect> m_multiTextureEffect;
+		std::shared_ptr<gk2::CubeMapper> m_cubeMapper;
 
 		std::shared_ptr<ID3D11InputLayout> m_layout;
 		std::shared_ptr<ID3D11ShaderResourceView> m_cubicMapTexture;
-		std::shared_ptr<gk2::ColorTexEffect> m_colorTextureEffect;
 		std::shared_ptr<ID3D11ShaderResourceView> m_duckTexture;
 		std::shared_ptr<ID3D11ShaderResourceView> m_waterTexture;
+		std::shared_ptr<ID3D11ShaderResourceView> m_waterBaseTexture;
+		std::shared_ptr<ID3D11ShaderResourceView> m_skyTexture;
+		std::shared_ptr<ID3D11ShaderResourceView> m_forestTexture;
+		std::shared_ptr<ID3D11ShaderResourceView> m_bottomTexture;
+		std::shared_ptr<ID3D11Texture2D> m_renderTexture;
 		std::shared_ptr<ID3D11SamplerState> m_samplerWrap;
 
 		std::shared_ptr<ID3D11BlendState> m_bsAlpha;
@@ -81,12 +100,15 @@ namespace gk2
 		float angle;
 
 		void UpdateCamera();
-		void Room::UpdateDuck(float dt);
+		void UpdateDuck(float dt);
+		void UpdateWater(float dt);
 
 		void DrawScene();
 		void DrawWalls();
 		void DrawDuck();
 		void DrawWater();
+
+		XMFLOAT3 Cross(XMFLOAT3 a, XMFLOAT3 b);
 
 		double CalculateZeroSplineValue(std::vector<double> knots, int i, double t);
 		double CalculateNSplineValue(std::vector<double> knots, int i, int n, double t);

@@ -79,12 +79,14 @@
     <ClInclude Include="gk2_camera.h" />
     <ClInclude Include="gk2_colorTexEffect.h" />
     <ClInclude Include="gk2_constantBuffer.h" />
+    <ClInclude Include="gk2_cubeMapper.h" />
     <ClInclude Include="gk2_deviceHelper.h" />
     <ClInclude Include="gk2_effectBase.h" />
     <ClInclude Include="gk2_exceptions.h" />
     <ClInclude Include="gk2_input.h" />
     <ClInclude Include="gk2_mesh.h" />
     <ClInclude Include="gk2_meshLoader.h" />
+    <ClInclude Include="gk2_multiTexEffect.h" />
     <ClInclude Include="gk2_phongEffect.h" />
     <ClInclude Include="gk2_room.h" />
     <ClInclude Include="gk2_textureEffect.h" />
@@ -97,12 +99,14 @@
     <ClCompile Include="gk2_camera.cpp" />
     <ClCompile Include="gk2_colorTexEffect.cpp" />
     <ClCompile Include="gk2_constantBuffer.cpp" />
+    <ClCompile Include="gk2_cubeMapper.cpp" />
     <ClCompile Include="gk2_deviceHelper.cpp" />
     <ClCompile Include="gk2_effectBase.cpp" />
     <ClCompile Include="gk2_exceptions.cpp" />
     <ClCompile Include="gk2_input.cpp" />
     <ClCompile Include="gk2_mesh.cpp" />
     <ClCompile Include="gk2_meshLoader.cpp" />
+    <ClCompile Include="gk2_multiTexEffect.cpp" />
     <ClCompile Include="gk2_phongEffect.cpp" />
     <ClCompile Include="gk2_room.cpp" />
     <ClCompile Include="gk2_textureEffect.cpp" />
@@ -118,8 +122,11 @@
     <Text Include="resources\meshes\duck.txt" />
   </ItemGroup>
   <ItemGroup>
+    <Image Include="resources\textures\bottom.jpg" />
     <Image Include="resources\textures\cubic_map.png" />
     <Image Include="resources\textures\ducktex.jpg" />
+    <Image Include="resources\textures\forest.jpg" />
+    <Image Include="resources\textures\sky.png" />
     <Image Include="resources\textures\water.jpg" />
   </ItemGroup>
   <ItemGroup>
@@ -129,6 +136,10 @@
       <FileType>Document</FileType>
     </None>
     <FxCompile Include="resources\shaders\ColorTexShader.hlsl">
+      <EntryPointName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">VS_Main</EntryPointName>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Vertex</ShaderType>
+    </FxCompile>
+    <FxCompile Include="resources\shaders\MultiTexShader.hlsl">
       <EntryPointName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">VS_Main</EntryPointName>
       <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Vertex</ShaderType>
     </FxCompile>

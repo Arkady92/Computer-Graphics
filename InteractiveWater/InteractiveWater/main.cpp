@@ -15,7 +15,7 @@ int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE prevInstance, LPWSTR cmdLine,
 	try
 	{
 		app.reset(new Room(hInstance));
-		w.reset(new Window(hInstance, 800, 800, L"Robot PUMA"));
+		w.reset(new Window(hInstance, 800, 800, L"Interactive Water"));
 		exitCode = app->Run(w.get(), cmdShow);
 	}
 	catch (Exception& e)

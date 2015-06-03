@@ -84,6 +84,12 @@
     <ClInclude Include="gk2_colorTexEffect.h">
       <Filter>Header Files\effects</Filter>
     </ClInclude>
+    <ClInclude Include="gk2_cubeMapper.h">
+      <Filter>Header Files\effects</Filter>
+    </ClInclude>
+    <ClInclude Include="gk2_multiTexEffect.h">
+      <Filter>Header Files\effects</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="gk2_effectBase.cpp">
@@ -137,6 +143,12 @@
     <ClCompile Include="gk2_colorTexEffect.cpp">
       <Filter>Source Files\effects</Filter>
     </ClCompile>
+    <ClCompile Include="gk2_cubeMapper.cpp">
+      <Filter>Source Files\effects</Filter>
+    </ClCompile>
+    <ClCompile Include="gk2_multiTexEffect.cpp">
+      <Filter>Source Files\effects</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="kaczka.pdf" />
@@ -159,6 +171,15 @@
     <Image Include="resources\textures\water.jpg">
       <Filter>Resource Files\textures</Filter>
     </Image>
+    <Image Include="resources\textures\bottom.jpg">
+      <Filter>Resource Files\textures</Filter>
+    </Image>
+    <Image Include="resources\textures\forest.jpg">
+      <Filter>Resource Files\textures</Filter>
+    </Image>
+    <Image Include="resources\textures\sky.png">
+      <Filter>Resource Files\textures</Filter>
+    </Image>
   </ItemGroup>
   <ItemGroup>
     <FxCompile Include="resources\shaders\PhongShader.hlsl">
@@ -168,6 +189,9 @@
       <Filter>Resource Files\shaders</Filter>
     </FxCompile>
     <FxCompile Include="resources\shaders\ColorTexShader.hlsl">
+      <Filter>Resource Files\shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="resources\shaders\MultiTexShader.hlsl">
       <Filter>Resource Files\shaders</Filter>
     </FxCompile>
   </ItemGroup>
