@@ -319,7 +319,7 @@ void Room::UpdateCamera()
 void Room::CheckKeys(Camera& m_camera){
 
 	KeyboardState currentKeyboardState;
-	const float factor = 1 / 100.0f;
+	const float factor = 1 / 300.0f;
 	if (m_keyboard->GetState(currentKeyboardState)){
 
 		if (currentKeyboardState.isKeyDown(DIK_Q) || currentKeyboardState.isKeyDown(DIK_LSHIFT)){

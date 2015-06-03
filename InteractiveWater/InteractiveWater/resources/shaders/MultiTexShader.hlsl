@@ -1,6 +1,7 @@
 Texture2D colorMap1 : register(t0);
 Texture2D colorMap2 : register(t1);
 SamplerState colorSampler : register(s0);
+SamplerCUBE colorSampler2 : register(s1);
 static const float transparency = 0.35f;
 
 cbuffer cbWorld : register(b0) //Vertex Shader constant buffer slot 0
@@ -90,8 +91,8 @@ float4 PS_Main(PSInput i) : SV_TARGET
 	float3 ViewRefr = normalize(-i.viewVec - 1.5 * normal);
 	ViewRefr = ray_to_texcoord(i.pos, ViewRefr);
 	ViewRefl = ray_to_texcoord(i.pos, ViewRefl);
-	float4 refl = colorMap1.Sample(colorSampler, ViewRefl);
-		float4 refr = float4(0.7, 1.0, 0.8, 0.1) * colorMap1.Sample(colorSampler, ViewRefr);
+	float4 refl = colorMap1.Sample(colorSampler2, ViewRefl);
+		float4 refr = float4(0.7, 1.0, 0.8, 0.1) * colorMap1.Sample(colorSampler2, ViewRefr);
 
 		float3 color = lerp(refr, refl, 0.3f + 0.7 * abs(dot(-i.viewVec, float3(0, 1, 0))));
 		color += lightColor * colorMap1.Sample(colorSampler, i.tex1).xyz * kd * saturate(dot(normal, lightVec)) +
