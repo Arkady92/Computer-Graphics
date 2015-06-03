@@ -116,10 +116,10 @@ void Room::CreateScene()
 
 	// b-spline
 	deBoorsPoints = vector<XMFLOAT3>(4);
-	deBoorsPoints[0] = XMFLOAT3(-1.0f, -0.5f, -1.0f);
-	deBoorsPoints[1] = XMFLOAT3(-1.0f, -0.5f, 1.0f);
-	deBoorsPoints[2] = XMFLOAT3(1.0f, -0.5f, -1.0f);
-	deBoorsPoints[3] = XMFLOAT3(1.0f, -0.5f, 2.0f);
+	deBoorsPoints[0] = XMFLOAT3(-0.5f, -0.5f, -0.5f);
+	deBoorsPoints[1] = XMFLOAT3(-0.5f, -0.5f, 0.5f);
+	deBoorsPoints[2] = XMFLOAT3(0.5f, -0.5f, -0.5f);
+	deBoorsPoints[3] = XMFLOAT3(0.5f, -0.5f, 0.5f);
 
 	m_lightPosCB->Update(m_context, LIGHT_POS);
 	m_textureCB->Update(m_context, XMMatrixScaling(0.5f, 0.5f, 0.5f) * XMMatrixTranslation(0.5f, 0.5f, 0.0f) * XMMatrixRotationZ(XM_PI));
@@ -129,14 +129,22 @@ void Room::CreateScene()
 
 void Room::UpdateDuck(float dt)
 {
+	const int factor[] = { 1, -1 };
 	duckPositionParameter += dt * duckStepFactor;
-	if (duckPositionParameter > 0.66 || duckPositionParameter < 0.33)
+	if (duckPositionParameter > 2.0f / 3.0f)
 	{
-		duckStepFactor = -duckStepFactor;
-		duckPositionParameter += dt * duckStepFactor;
+		deBoorsPoints[0] = deBoorsPoints[1];
+		deBoorsPoints[1] = deBoorsPoints[2];
+		deBoorsPoints[2] = deBoorsPoints[3];
+
+		deBoorsPoints[3] = XMFLOAT3(factor[rand() % 2] * (rand() % 50 + 50) / 100.0f, -0.5f, factor[rand() % 2] * (rand() % 100 - 50) / 100.0f);
+		duckPositionParameter = 1.0f / 3.0f;
 	}
-	duckPosition = GetDuckPosition(duckPositionParameter);
-	m_duck.setWorldMatrix(baseDuckMatrix * XMMatrixTranslation(duckPosition.x, duckPosition.y, duckPosition.z));
+	XMFLOAT3 currentDuckPosition = GetDuckPosition(duckPositionParameter);
+	float alpha = atan((currentDuckPosition.z - duckPosition.z) / (currentDuckPosition.x - duckPosition.x));
+	m_duck.setWorldMatrix(baseDuckMatrix * XMMatrixRotationY(XM_PI - alpha) *
+		XMMatrixTranslation(duckPosition.x, duckPosition.y, duckPosition.z));
+	duckPosition = currentDuckPosition;
 }
 
 XMFLOAT3 Room::GetDuckPosition(float t)

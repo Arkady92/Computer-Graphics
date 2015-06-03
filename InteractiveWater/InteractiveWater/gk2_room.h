@@ -34,7 +34,7 @@ namespace gk2
 		static const XMFLOAT4 LIGHT_POS;
 		std::vector<XMFLOAT3> deBoorsPoints;
 		XMMATRIX baseDuckMatrix;
-		float duckPositionParameter = 0.33f;
+		float duckPositionParameter = 1.0f / 3.0f;
 		XMFLOAT3 duckPosition;
 		float duckStepFactor = 0.1;
 		int N = 256;
