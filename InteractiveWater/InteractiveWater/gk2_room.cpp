@@ -132,14 +132,14 @@ void Room::UpdateDuck(float dt)
 {
 	const int factor[] = { 1, -1 };
 	duckPositionParameter += dt * duckStepFactor;
-	if (duckPositionParameter >= 2.0f / 3.0f)
+	if (duckPositionParameter >= 3.0f / 5.0f)
 	{
 		deBoorsPoints[0] = deBoorsPoints[1];
 		deBoorsPoints[1] = deBoorsPoints[2];
 		deBoorsPoints[2] = deBoorsPoints[3];
 
 		deBoorsPoints[3] = XMFLOAT3(factor[rand() % 2] * (rand() % 50 + 50) / 100.0f, -0.5f, factor[rand() % 2] * (rand() % 100 - 50) / 100.0f);
-		duckPositionParameter = 1.0f / 3.0f;
+		duckPositionParameter = 2.0f / 5.0f;
 	}
 	XMFLOAT3 currentDuckPosition = GetDuckPosition(duckPositionParameter);
 	if (abs(duckPosition.x - currentDuckPosition.x) < 0.001 && abs(duckPosition.z - currentDuckPosition.z) < 0.001) return;
@@ -151,15 +151,13 @@ void Room::UpdateDuck(float dt)
 
 XMFLOAT3 Room::GetDuckPosition(float t)
 {
-	int knotsDivider = 3;
+	int knotsDivider = 5;
 	float knotsDivision = 1.0 / knotsDivider;
 	vector<double> knots(8);
 	knots[0] = 0;
-	knots[1] = 0;
-	for (int i = 2; i < 6; i++)
-		knots[i] = (i - 2) * knotsDivision;
-	knots[5] = 1;
-	knots[6] = 1;
+	for (int i = 1; i < 7; i++)
+		knots[i] = (i - 1) * knotsDivision;
+	knots[7] = 1;
 	XMFLOAT3 position(0.0f, 0.0f, 0.0f);
 	for (int i = 0; i < 4; i++)
 	{
