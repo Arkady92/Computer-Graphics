@@ -1,15 +1,15 @@
-#ifndef __GK2_TRIANGLE_EFFECT_H_
-#define __GK2_TRIANGLE_EFFECT_H_
+#ifndef __GK2_PARTI_EFFECT_H_
+#define __GK2_PARTI_EFFECT_H_
 
 #include "gk2_effectBase.h"
 
 namespace gk2
 {
-	class TriangleEffect : public gk2::EffectBase
+	class PartIEffect : public gk2::EffectBase
 	{
 	public:
-		TriangleEffect(gk2::DeviceHelper& device, std::shared_ptr<ID3D11InputLayout>& layout,
-				   std::shared_ptr<ID3D11DeviceContext> context = nullptr);
+		PartIEffect(gk2::DeviceHelper& device, std::shared_ptr<ID3D11InputLayout>& layout,
+			std::shared_ptr<ID3D11DeviceContext> context = nullptr);
 		void SetSurfaceColorBuffer(const std::shared_ptr<gk2::ConstantBuffer<XMFLOAT4>>& surfaceColor);
 
 	protected:
@@ -25,4 +25,4 @@ namespace gk2
 	};
 }
 
-#endif __GK2_TRIANGLE_EFFECT_H_
+#endif __GK2_PARTI_EFFECT_H_

@@ -15,6 +15,8 @@ namespace gk2
 		void SetWorldMtxBuffer(const std::shared_ptr<gk2::CBMatrix>& world);
 		void SetViewMtxBuffer(const std::shared_ptr<gk2::CBMatrix>& view);
 		void SetProjMtxBuffer(const std::shared_ptr<gk2::CBMatrix>& proj);
+		void SetEedgeTessellationFactorBuffer(const std::shared_ptr<gk2::ConstantBuffer<FLOAT>>& e);
+		void SetInteriorTessellationFactorBuffer(const std::shared_ptr<gk2::ConstantBuffer<FLOAT>>& i);
 
 		void Begin(std::shared_ptr<ID3D11DeviceContext> context = nullptr);
 		void End();
@@ -27,13 +29,16 @@ namespace gk2
 		virtual void SetDomainShaderData() = 0;
 		virtual void SetPixelShaderData() = 0;
 
+
+		std::shared_ptr<gk2::ConstantBuffer<FLOAT>> m_edgeTessellationFactor;
+		std::shared_ptr<gk2::ConstantBuffer<FLOAT>> m_interiorTessellationFactor;
 		std::shared_ptr<gk2::CBMatrix> m_worldCB;
 		std::shared_ptr<gk2::CBMatrix> m_viewCB;
 		std::shared_ptr<gk2::CBMatrix> m_projCB;
 		std::shared_ptr<ID3D11DeviceContext> m_context;
 
 		void Initialize(gk2::DeviceHelper& device, std::shared_ptr<ID3D11InputLayout>& layout,
-								const std::wstring& shaderFile);
+			const std::wstring& shaderFile, bool phong = false);
 
 	private:
 		std::shared_ptr<ID3D11VertexShader> m_vs;

@@ -69,7 +69,19 @@
     <ClCompile Include="gk2_effectBase.cpp">
       <Filter>Source Files\effects</Filter>
     </ClCompile>
-    <ClCompile Include="gk2_triangleEffect.cpp">
+    <ClCompile Include="gk2_colorEffect.cpp">
+      <Filter>Source Files\effects</Filter>
+    </ClCompile>
+    <ClCompile Include="gk2_partIEffect.cpp">
+      <Filter>Source Files\effects</Filter>
+    </ClCompile>
+    <ClCompile Include="gk2_partIIEffect.cpp">
+      <Filter>Source Files\effects</Filter>
+    </ClCompile>
+    <ClCompile Include="gk2_partIIIEffect.cpp">
+      <Filter>Source Files\effects</Filter>
+    </ClCompile>
+    <ClCompile Include="gk2_partIVVEffect.cpp">
       <Filter>Source Files\effects</Filter>
     </ClCompile>
   </ItemGroup>
@@ -107,7 +119,19 @@
     <ClInclude Include="gk2_effectBase.h">
       <Filter>Header Files\effects</Filter>
     </ClInclude>
-    <ClInclude Include="gk2_triangleEffect.h">
+    <ClInclude Include="gk2_colorEffect.h">
+      <Filter>Header Files\effects</Filter>
+    </ClInclude>
+    <ClInclude Include="gk2_partIEffect.h">
+      <Filter>Header Files\effects</Filter>
+    </ClInclude>
+    <ClInclude Include="gk2_partIIEffect.h">
+      <Filter>Header Files\effects</Filter>
+    </ClInclude>
+    <ClInclude Include="gk2_partIIIEffect.h">
+      <Filter>Header Files\effects</Filter>
+    </ClInclude>
+    <ClInclude Include="gk2_partIVVEffect.h">
       <Filter>Header Files\effects</Filter>
     </ClInclude>
   </ItemGroup>
@@ -121,9 +145,23 @@
     <None Include="resources\textures\normals.dds">
       <Filter>Resource Files\textures</Filter>
     </None>
-    <None Include="resources\shaders\TessellatedTriangle.hlsl">
+    <None Include="resources\shaders\ColorShader.hlsl">
       <Filter>Resource Files\shaders</Filter>
     </None>
     <None Include="Projekt4.pdf" />
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="resources\shaders\PartIIIShader.hlsl">
+      <Filter>Resource Files\shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="resources\shaders\PartIVVShader.hlsl">
+      <Filter>Resource Files\shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="resources\shaders\PartIShader.hlsl">
+      <Filter>Resource Files\shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="resources\shaders\PartIIShader.hlsl">
+      <Filter>Resource Files\shaders</Filter>
+    </FxCompile>
   </ItemGroup>
 </Project>
