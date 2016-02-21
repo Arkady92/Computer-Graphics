@@ -319,6 +319,7 @@ void Tessellation::Update(float dt)
 		if (prevKeyState.isKeyDown(DIK_RIGHT) && currentKeyState.isKeyUp(DIK_RIGHT))
 		{
 			ETF++;
+			ETF = ETF;
 			m_edgeTessellationFactorCB->Update(m_context, ETF);
 		}
 		else if (prevKeyState.isKeyDown(DIK_LEFT) && currentKeyState.isKeyUp(DIK_LEFT))

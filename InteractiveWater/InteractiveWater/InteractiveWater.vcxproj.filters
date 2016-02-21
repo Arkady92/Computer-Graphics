@@ -152,9 +152,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="kaczka.pdf" />
-    <None Include="resources\shaders\CubeMapShader.hlsl">
-      <Filter>Resource Files\shaders</Filter>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <Text Include="resources\meshes\duck.txt">
@@ -197,5 +194,6 @@
     <FxCompile Include="resources\shaders\MultiTexShader.hlsl">
       <Filter>Resource Files\shaders</Filter>
     </FxCompile>
+    <FxCompile Include="resources\shaders\CubeMapShader.hlsl" />
   </ItemGroup>
 </Project>

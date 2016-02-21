@@ -108,7 +108,8 @@ HSPatchOutput HS_PatchConstantFunc(InputPatch<HSInput, INPUT_PATCH_SIZE> i, uint
 {
 	HSPatchOutput o;
 	int edgeFactor = (int)(CalculateLogarithmicFactor(abs(i[patchId].cameraPos.z)));
-	int interiorFactor = (int)(CalculateLogarithmicFactor(abs((i[patchId].cameraPos - i[patchId].pos).z)));
+	float diff = abs(-abs(i[patchId].cameraPos.z) - (i[patchId].pos.z));
+	int interiorFactor = (int)(CalculateLogarithmicFactor(diff));
 
 	o.edges[0] = o.edges[1] = o.edges[2] = o.edges[3] = edgeFactor + ETF;
 	o.inside[0] = o.inside[1] = interiorFactor + ITF;
